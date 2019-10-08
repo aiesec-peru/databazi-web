@@ -65,6 +65,7 @@ export class DomainsService {
 			{ name : 'LUYA', department: 'AMAZONAS' },
 			{ name : 'RODRIGUEZ DE MENDOZA', department: 'AMAZONAS' },
 			{ name : 'UTCUBAMBA', department: 'AMAZONAS' },
+			{ name : 'ANCASH', department: 'ANCASH' },
 			{ name : 'HUARAZ', department: 'ANCASH' },
 			{ name : 'AIJA', department: 'ANCASH' },
 			{ name : 'ANTONIO RAYMONDI', department: 'ANCASH' },
