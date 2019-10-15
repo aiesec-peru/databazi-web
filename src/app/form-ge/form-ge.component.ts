@@ -344,7 +344,7 @@ export class FormGeComponent implements OnInit {
     else {
       this.invalidPassword = false;
     }
-  }
+  };
 
   unableToSubmit() {
     return this.emptyFields() || this.emptyUniversity() || this.emptyCourse() || !this.user.when_can_travel || !+this.user.referral_type || this.isValidStudy('password') || this.invalidPassword || !this.user.exchange_reason.toString();

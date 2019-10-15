@@ -546,7 +546,7 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">119</context>
         </context-group>
-      <target>¿Buscas la próxima oportunidad para cambiar de vida y obtener experiencia profesional? 
+      <target>¿Buscas la próxima oportunidad para cambiar de vida y obtener experiencia profesional?
 Diferenciate a través de una pasantía profesional en el extranjero. </target></trans-unit>
       <trans-unit id="landingGtAboutMobile" datatype="html">
         <source>
@@ -556,7 +556,7 @@ Diferenciate a través de una pasantía profesional en el extranjero. </target><
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">124</context>
         </context-group>
-      <target>Buscas la próxima oportunidad para cambiar de vida y obtener experiencia profesional? 
+      <target>Buscas la próxima oportunidad para cambiar de vida y obtener experiencia profesional?
 Diferenciate a través de una pasantía profesional en el extranjero</target></trans-unit>
       <trans-unit id="learnMoreGtItem1" datatype="html">
         <source>
@@ -656,7 +656,7 @@ Diferenciate a través de una pasantía profesional en el extranjero</target></t
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">232</context>
         </context-group>
-      <target>El modelo de desarrollo de liderazgo de AIESEC prepara jovenes para que sean un agente de cambio en el mundo, 
+      <target>El modelo de desarrollo de liderazgo de AIESEC prepara jovenes para que sean un agente de cambio en el mundo,
 permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada día.</target></trans-unit>
       <trans-unit id="getToKnowOurPrograms" datatype="html">
         <source>Conheça nossos programas</source>
@@ -726,8 +726,8 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">303</context>
         </context-group>
-      <target>“Ser parte de un voluntariado internacional es el mejor camino para entender el 
-                      sentido de SERVIR. Mi experiencia en Costa Rica cubrió mis expectativas, siempre 
+      <target>“Ser parte de un voluntariado internacional es el mejor camino para entender el
+                      sentido de SERVIR. Mi experiencia en Costa Rica cubrió mis expectativas, siempre
                       habrá algo nuevo que visitar y cosas nuevas que aprender, además su gente te contagiara
                        de su buena vibra.  Asimismo aunque se presenten algunos problemas en el camino eso nos
                         ayudará a conocernos a nosotros mismos y saber de lo que somos capaces”</target></trans-unit>
@@ -741,9 +741,9 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">318</context>
         </context-group>
-      <target>“Cuando inicie la experiencia en mi startup tenía miedo de no poder comunicar lo que 
+      <target>“Cuando inicie la experiencia en mi startup tenía miedo de no poder comunicar lo que
                       quería decir debido al idioma, pero las personas aquí hicieron que todo sea más fácil,
-                       nunca antes hubiera podido imaginar lo fascinante y amplio que es el mundo emprendedor, 
+                       nunca antes hubiera podido imaginar lo fascinante y amplio que es el mundo emprendedor,
                        día a día tengo que esforzarme para estar al nivel. En esta experiencia pude abrir mi
                         mente a muchas cosas que no había visto en Perú.”</target></trans-unit>
       <trans-unit id="landingOurHistory3" datatype="html">
@@ -755,10 +755,10 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">334</context>
         </context-group>
-      <target>“Durante este tiempo en India he aprendido diversas herramientas como Analista de 
+      <target>“Durante este tiempo en India he aprendido diversas herramientas como Analista de
                       Compras para Tata Consultancy Services LTD. El estar dentro del mercado internacional
                        es algo completamente distinto. Esto me enseñó el trabajo en equipo, la gestión y
-                        sobre todo ganar una experiencia profesional que me abrirá muchas puertas en el 
+                        sobre todo ganar una experiencia profesional que me abrirá muchas puertas en el
                         futuro”.</target></trans-unit>
       <trans-unit id="formGeTitle" datatype="html">
         <source>Assuma os desafios de trabalhar em uma Startup e se desenvolva como um líder empreendedor.</source>
@@ -1128,30 +1128,9 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="linenumber">179</context>
         </context-group>
       <target>Confirmar contraseña</target></trans-unit>
-      <trans-unit id="formPasswordEmpty" datatype="html">
-        <source>
-                  Preencha com a sua senha.
-                  <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
-                  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>
-                    (Pelo menos um caracter em maiúsculo, minúsculo, ao menos um número e no mínimo, 8 caracteres)
-                  <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
-                </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
-          <context context-type="linenumber">186</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
-          <context context-type="linenumber">187</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
-          <context context-type="linenumber">185</context>
-        </context-group>
-      <target>Completa con tu contraseña. (Por lo menos un caracter en mayúscula, otro en minúscula, al menos un número y por lo menos 8 caracteres en total.)</target></trans-unit>
       <trans-unit id="formPasswordError" datatype="html">
         <source>
-                  As senhas não conferem! Digite novamente
+                  ¡Las contraseñas no coinciden! Escribe nuevamente
                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
@@ -1699,7 +1678,7 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="linenumber">383</context>
         </context-group>
       <target></target></trans-unit>
-      
+
       <trans-unit id="referralType" datatype="html">
         <source>
                     Como conheceu a AIESEC?
@@ -1711,7 +1690,7 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
           <context context-type="linenumber">398</context>
-        </context-group> 
+        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">351</context>
@@ -1988,7 +1967,7 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
         </context-group>
         <target>Es necesario preparar tu curriculum vitae en inglés para presentar a las Start Ups a las que estás aplicando. No te preocupes, estamos aquí para ayudarte.</target>
       </trans-unit>
-      
+
       <trans-unit id="accessHomePage" datatype="html">
         <source>
           Acessar a página inicial
@@ -2805,7 +2784,7 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
           <context context-type="linenumber">17</context>
         </context-group>
-      
+
       <target>Vive la realidad de una empresa internacional, desarrolla tus habilidades y trae el mundo a tu currículum</target></trans-unit>
       <trans-unit id="formGvTitle" datatype="html">
         <source>Ser um voluntário global é transformar seus valores em ação e fazer a diferença em diversas regiões do mundo.</source>
@@ -2919,8 +2898,8 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
         </context-group>
       <target>La oficina de AIESEC más cercana a ti entrará en contacto para resolver tus dudas e indicarte las mejores oportunidades.
 
-</target></trans-unit>      
-      
+</target></trans-unit>
+
       <trans-unit id="applyInOurVacanciesTitle" datatype="html">
         <source>
                 Aplique em nossas vagas

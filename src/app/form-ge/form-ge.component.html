@@ -41,7 +41,7 @@
                 <a href="https://auth.aiesec.org/users/sign_in?country=Peru#login" class="form-email-warning">
                   <strong i18n="@@accessThePlatformQuestion">Gostaria de acessar a plataforma?</strong>
                 </a>
-                <br/>  
+                <br/>
                 <a href="https://auth.aiesec.org/users/password/new" class="form-email-warning">
                   <strong i18n="@@recoverPlatformPassword">Recuperar minha senha</strong>
                 </a>
@@ -138,7 +138,7 @@
                     Desculpe, nossos programas são direcionados para pessoas entre 18 e 30 anos.
                   </div>
                 </div>
-                
+
                 <div class="form-group form-check text-center checkbox">
                   <input type="checkbox" class="form-check-input" [checked]="user.cellphone_contactable" id="aceitoContato" [(ngModel)]="user.cellphone_contactable"
                     formControlName="cellphone_contactable" name="cellphone_contactable">
@@ -222,7 +222,7 @@
                     Por favor, selecione sua cidade
                   </div>
                 </div>
-         
+
                 <div class="animated fadeIn faster form-group university" *ngIf='user.city.name && user.scholarity.id > 1'>
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
@@ -245,7 +245,7 @@
                     Selecione uma universidade.
                   </div>
                 </div>
-  
+
                 <div class="animated fadeIn faster form-group college_course" *ngIf='user.city.name && user.scholarity.id > 1'>
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
@@ -270,11 +270,6 @@
                 </div>
 
                 <!-- Password -->
-                <div class='error-message animated fadeIn' [hidden]="!user.password">
-                  <span>
-                    Para poder acceder a nuestras oportunidades en aiesec.org es necesario que crees una contraseña.
-                  </span>
-                </div>
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-prepend desktop">
@@ -292,6 +287,13 @@
                     <div class="valid-feedback">
                       <i class="fas fa-check"></i>
                     </div>
+                  </div>
+                  <div *ngIf="isValidStudy('password')" class='error-message animated fadeIn' [hidden]="!user.password">
+                    Completa con tu contraseña.
+                  <br>
+                    <span>
+                      Tu contraseña debe contener al menos 8 caractéres, de los cuales uno debe ser un caracter en mayúscula, otro en minúscula, y un número.
+                    </span>
                   </div>
                 </div>
                 <div class="form-group">
@@ -313,17 +315,9 @@
                     </div>
                   </div>
                 </div>
-                <div *ngIf="user.repassword && isValidStudy('password')" class='error-message animated fadeIn' i18n="@@formPasswordEmpty">
-                  Preencha com a sua senha.
-                  <br>
-                  <span>
-                    (Pelo menos um caracter em maiúsculo, minúsculo, ao menos um número e no mínimo, 8 caracteres)
-                  </span>
-                </div>
                 <div *ngIf="invalidPassword" class='error-message' i18n="@@formPasswordError">
-                  As senhas não conferem! Digite novamente
+                  <span>¡Las contraseñas no coinciden! Escribe nuevamente</span>
                 </div>
-
                 <div class="form-group getToKnow" *ngIf='!persona'>
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
@@ -343,7 +337,7 @@
                     Por favor, selecione um valor
                   </div>
                 </div>
-                
+
                 <div class="form-group experiences-input">
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
@@ -356,7 +350,7 @@
                       Escolha o período de tempo que você estará disponível
                     </div>
                   </div>
-            
+
                   <div class="form-checkbox-select">
                     <div class="checkbox-item" *ngFor="let travel of travelOptions">
                       <label>
@@ -385,8 +379,8 @@
                       </label>
                     </div>
                   </div>
-                </div>            
-                
+                </div>
+
                 <div class="form-group getToKnow">
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
@@ -404,7 +398,7 @@
                   <div *ngIf="isValidStudy('referral_type')" class='error-message'>
                     Por favor, selecione um valor
                   </div>
-                </div>               
+                </div>
 
               </form>
             </div>
