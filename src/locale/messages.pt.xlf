@@ -1093,27 +1093,6 @@
           <context context-type="linenumber">179</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="formPasswordEmpty" datatype="html">
-        <source>
-                  Preencha com a sua senha.
-                  <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
-                  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>
-                    (Pelo menos um caracter em maiúsculo, minúsculo, ao menos um número e no mínimo, 8 caracteres)
-                  <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
-                </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
-          <context context-type="linenumber">186</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
-          <context context-type="linenumber">187</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
-          <context context-type="linenumber">185</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="formPasswordError" datatype="html">
         <source>
                   As senhas não conferem! Digite novamente

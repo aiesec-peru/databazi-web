@@ -293,6 +293,8 @@
                     </div>
                   </div>
                   <div *ngIf="isValidStudy('password')" class='error-message animated fadeIn' [hidden]="!user.password">
+                      Completa con tu contraseña.
+                      <br>
                     <span>
                       Tu contraseña debe contener al menos 8 caractéres, de los cuales uno debe ser un caracter en mayúscula, otro en minúscula, y un número.
                     </span>
@@ -316,13 +318,6 @@
                       <i class="fas fa-check"></i>
                     </div>
                   </div>
-                </div>
-                <div *ngIf="isValidStudy('repassword')" class='error-message animated fadeIn' i18n="@@formPasswordEmpty">
-                  Completa con tu contraseña.
-                  <br>
-                  <span>
-                    (Tu contraseña debe contener al menos 8 caractéres, de los cuales uno debe ser un caracter en mayúscula, otro en minúscula, y un número.)
-                  </span>
                 </div>
                 <div *ngIf="invalidPassword" class='error-message' i18n="@@formPasswordError">
                   <span>¡Las contraseñas no coinciden! Escribe nuevamente</span>
