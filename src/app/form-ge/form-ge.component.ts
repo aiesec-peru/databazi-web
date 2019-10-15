@@ -338,7 +338,7 @@ export class FormGeComponent implements OnInit {
   }
 
   checkPassword() {
-    if (this.user.repassword && this.user.password != this.user.repassword) {
+    if (this.user.password != this.user.repassword) {
       this.invalidPassword = true;
     }
     else {
@@ -413,7 +413,7 @@ export class FormGeComponent implements OnInit {
 
   registerUser(el: HTMLElement) {
     this.submittedPersonal = true;
-    if (this.user.fullname && this.user.cellphone && this.user.email && this.user.birthdate && !this.invalidPassword && !this.invalidPhone && this.matchDate) {
+    if (this.user.fullname && this.user.cellphone && this.user.email && this.user.birthdate && !this.invalidPhone && this.matchDate) {
       this.personalData = false;
       this.studyData = true;
       this.signupService.registerUserToRD(this.user, 'expa_reg_form_ge');
