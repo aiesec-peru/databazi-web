@@ -37,11 +37,12 @@ export class DomainsService {
 	getReferralTypes(){
 		return [
 			{ id : 1, value: 'Facebook' },
-			{ id : 2, value: 'Instagram' },
-			{ id : 3, value: 'Sugerido por Amigos o Familiares' },
-			{ id : 4, value: 'Evento en mi Universidad' },
-			{ id : 5, value: 'Publicidad Visual en mi Universidad' },
-			{ id : 6, value: 'Otros' }
+      { id : 2, value: 'Instagram' },
+			{ id : 3, value: 'Blog' },
+			{ id : 4, value: 'Sugerido por Amigos o Familiares' },
+			{ id : 5, value: 'Evento en mi Universidad' },
+			{ id : 6, value: 'Publicidad Visual en mi Universidad' },
+			{ id : 7, value: 'Otros' }
 		];
 	}
 
