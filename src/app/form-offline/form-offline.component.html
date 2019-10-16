@@ -336,11 +336,11 @@
                     Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
                   </span>
                 </div>
-                <div *ngIf="user.repassword && isValidStudy('password')" class='error-message animated fadeIn' i18n="@@formPasswordEmpty">
-                  Preencha com a sua senha.
+                <div *ngIf="isValidStudy('repassword')" class='error-message animated fadeIn'>
+                  Completa con tu contraseÃ±a.
                   <br>
                   <span>
-                    (Pelo menos um caracter em maiúsculo, minúsculo, ao menos um número e no mínimo, 8 caracteres)
+                    (Tu contraseÃ±a debe contener al menos 8 caractÃ©res, de los cuales uno debe ser un caracter en mayÃºscula, otro en minÃºscula, y un nÃºmero.)
                   </span>
                 </div>
                 <div *ngIf="invalidPassword" class='error-message' i18n="@@formPasswordError">
