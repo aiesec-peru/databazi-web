@@ -53,11 +53,21 @@
             <div class="animated fadeIn" *ngIf="personalData && !completedSignup">
               <form [formGroup]="step1Form" class="forms gv">
                 <div class="form-group">
-                  <div class="input-group">
-                    <div class="input-group-prepend desktop">
+
+                  <div class="input-group label-float">
+                    <!-- <input type="text" class="form-control desktop" placeholder=" "/> -->
+                    <input type="text" class="form-control desktop" placeholder="Como é pra gente te chamar?" i18n-placeholder="@@fullnamePlaceholder" [(ngModel)]="user.fullname" formControlName="fullname"
+                      name="fullname" required>
+                    <label><i class="fas fa-user"></i>Telefone</label>
+                  </div>
+
+
+                  <div class="input-group label-float" style="display: none;">
+                    <!-- <div class="input-group-prepend desktop"> -->
                       <div class="input-group-text">
-                        <i class="fas fa-user"></i><span i18n="@@fullname">Nome Completo</span></div>
-                    </div>
+                          <i class="fas fa-user"></i><span i18n="@@fullname">Nome Completo</span>                          
+                      </div>
+                    <!-- </div> -->
                     <!-- desktop -->
                     <input type="text" class="form-control desktop" placeholder="Como é pra gente te chamar?" i18n-placeholder="@@fullnamePlaceholder" [(ngModel)]="user.fullname" formControlName="fullname"
                       name="fullname" required>

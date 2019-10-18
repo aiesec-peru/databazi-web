@@ -54,6 +54,7 @@ a {
 
 .desktop {
     display: flex !important;
+    height: 0px;
 }
 
 .mobile {
@@ -706,7 +707,7 @@ input[type=tel] {
     font-size: 16px;
     font-weight: lighter;
     padding-right: 30px;
-    text-align: right;
+    text-align: left;
 }
 
 input[type=text]:focus,
@@ -1473,12 +1474,19 @@ label {
     color: #fff;
     background-color: #ed482d;
     border-bottom: 2px solid #f6a496;
+    width: 100%;
 }
 
 .form-volutario-global .input-group-text {
+    /*color: #f5d3cd;
+    background-color: #ed482d;
+    border-bottom: 2px solid #f6a496;*/
     color: #f5d3cd;
     background-color: #ed482d;
-    border-bottom: 2px solid #f6a496;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    top: 16px;
+    z-index: 999; 
 }
 
 .form-volutario-global .form-control:disabled,
@@ -1935,4 +1943,46 @@ label.input-terms-label {
 
 .form-email-warning{
     color:#e2462d !important;
+}
+
+
+/*float label*/
+.label-float{
+  position: relative;
+  padding-top: 13px;
+}
+
+.label-float input{
+  border: 0;
+  border-bottom: 2px solid lightgrey;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -webkit-appearance:none;
+  border-radius: 0;
+}
+
+.label-float input::placeholder{
+  color:transparent;
+}
+
+.label-float label{
+  pointer-events: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label{
+  font-size: 13px;
+  margin-top: 3px;
+  z-index: 999;
 }
