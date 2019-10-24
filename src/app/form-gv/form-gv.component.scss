@@ -321,7 +321,7 @@ select:focus {
 .input-group-text span {
     width: 90%;
     white-space: initial;
-    text-align:left;
+    text-align: left !important;
     font-size: .85em;
 }
 
@@ -357,7 +357,7 @@ _:-o-prefocus,
     }
 }
 
-// TODO: ::ng-deep / /deep/ 
+// TODO: ::ng-deep / /deep/
 // Seems to be a form of selection that will be abolished in the future, an alternative form of editing of this component should be found without the use of these selectors.
 /*
     Links de referência:
@@ -526,8 +526,12 @@ strong {
     text-decoration: underline;
 }
 
-.fas {
-    margin-right: 15px;
+.icon-ajust {
+  z-index: 1111;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 15px;
 }
 
 .btn .fas {
@@ -573,7 +577,7 @@ section.header h1 {
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    align-items: center; 
+    align-items: center;
     .row {
         padding: 10px;
         background-color: rgba(255, 255, 255, .25);
@@ -646,7 +650,7 @@ section.header h1 {
     margin-bottom: 0;
     font-size: 18px;
     font-weight: 400;
-    line-height: 18px;
+    line-height: 18px !important;
     text-align: center;
     white-space: nowrap;
     border-radius: 0;
@@ -1007,6 +1011,10 @@ label {
     height: 40px;
 }
 
+.fas {
+  margin-right: 10px;
+}
+
 .modal .fas {
     margin: 0;
     padding: 0;
@@ -1119,7 +1127,7 @@ label {
   --------------------------------------------------------------*/
 
 @media (max-width: 767px) {
-    //prime 
+    //prime
     ::ng-deep .p-inputMask input {
         text-align: right;
         margin: 0;
@@ -1247,7 +1255,7 @@ label {
 @media (max-width: 600px) {
     #inputDatadeNascimento {
         text-align: left;
-    } //prime 
+    } //prime
     p-autoComplete {
         font-size: 3.2vw !important
     }
@@ -1474,19 +1482,12 @@ label {
     color: #fff;
     background-color: #ed482d;
     border-bottom: 2px solid #f6a496;
-    width: 100%;
 }
 
 .form-volutario-global .input-group-text {
-    /*color: #f5d3cd;
-    background-color: #ed482d;
-    border-bottom: 2px solid #f6a496;*/
     color: #f5d3cd;
     background-color: #ed482d;
-    border-bottom: 2px solid transparent;
-    position: relative;
-    top: 16px;
-    z-index: 999; 
+    border-bottom: 2px solid #f6a496;
 }
 
 .form-volutario-global .form-control:disabled,
@@ -1660,12 +1661,6 @@ label {
 
 .form-talentos-globais .form-control {
     color: #054048;
-    background-color: #0a8191;
-    border-bottom: 2px solid #0a8ea0;
-}
-
-.form-talentos-globais .input-group-text {
-    color: #ffffff;
     background-color: #0a8191;
     border-bottom: 2px solid #0a8ea0;
 }
@@ -1935,7 +1930,7 @@ label.input-terms-label {
     width: 100%;
     font-style: initial;
     option {
-        color: grey;    
+        color: grey;
         font-size: 16px;
         font-style: initial;
     }
@@ -1945,44 +1940,84 @@ label.input-terms-label {
     color:#e2462d !important;
 }
 
+.ajust-height {
+  height: 50px;
+}
 
 /*float label*/
-.label-float{
-  position: relative;
-  padding-top: 13px;
+
+@media (min-width: 601px ) {
+  .label-float{
+    position: relative;
+    text-align: center !important;
+  }
+
+  .label-float input{
+    position: absolute;
+    text-align: left !important;
+    border: 0;
+    border-bottom: 2px solid lightgrey;
+    padding-left: 34px;
+    padding-top: 20px !important;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -webkit-appearance:none;
+    border-radius: 0;
+  }
+
+  .label-float input::placeholder{
+    color:transparent;
+  }
+
+  .label-float label{
+    margin-bottom: 4px;
+    text-align: center !important;
+    pointer-events: none;
+    position: absolute;
+    padding-left: 25px;
+    left: 10px;
+    margin-top: 12px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+  }
+
+  .ajust-input {
+    text-align: center;
+  }
+
+  .label-float input:focus + label,
+  .label-float input:not(:placeholder-shown) + label{
+    font-size: 13px;
+    margin-top: 3px;
+    z-index: 999;
+  }
+
+  .label-experience {
+    padding-top: 12px !important;
+  }
+
+  .label-experience span{
+    padding: 12px 0px 6px 12px;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
 }
 
-.label-float input{
-  border: 0;
-  border-bottom: 2px solid lightgrey;
-  outline: none;
-  min-width: 180px;
-  font-size: 16px;
-  transition: all .3s ease-out;
-  -webkit-transition: all .3s ease-out;
-  -moz-transition: all .3s ease-out;
-  -webkit-appearance:none;
-  border-radius: 0;
-}
-
-.label-float input::placeholder{
-  color:transparent;
-}
-
-.label-float label{
-  pointer-events: none;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  margin-top: 13px;
-  transition: all .3s ease-out;
-  -webkit-transition: all .3s ease-out;
-  -moz-transition: all .3s ease-out;
-}
-
-.label-float input:focus + label,
-.label-float input:not(:placeholder-shown) + label{
-  font-size: 13px;
-  margin-top: 3px;
-  z-index: 999;
+@media(max-width:600px){
+  .ajust-input{
+    padding-left: 34px;
+  }
+  .display-mobile {
+    display:none !important;
+  }
 }
