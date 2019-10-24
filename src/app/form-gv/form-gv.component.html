@@ -53,11 +53,22 @@
             <div class="animated fadeIn" *ngIf="personalData && !completedSignup">
               <form [formGroup]="step1Form" class="forms gv">
                 <div class="form-group">
-                  <div class="input-group">
-                    <div class="input-group-prepend desktop">
+
+                  <div class="input-group label-float">
+                    <i class="fas icon-ajust fa-user"></i>
+                    <!-- <input type="text" class="form-control desktop" placeholder=" "/> -->
+                    <input type="text" class="form-control ajust-input" placeholder="Como é pra gente te chamar?" i18n-placeholder="@@fullnamePlaceholder" [(ngModel)]="user.fullname" formControlName="fullname"
+                      name="fullname" required>
+                    <label class="display-mobile">Nome Completo</label>
+                  </div>
+
+
+                  <div class="input-group label-float" style="display: none;">
+                    <!-- <div class="input-group-prepend desktop"> -->
                       <div class="input-group-text">
-                        <i class="fas fa-user"></i><span i18n="@@fullname">Nome Completo</span></div>
-                    </div>
+                          <i class="fas fa-user"></i><span i18n="@@fullname">Nome Completo</span>
+                      </div>
+                    <!-- </div> -->
                     <!-- desktop -->
                     <input type="text" class="form-control desktop" placeholder="Como é pra gente te chamar?" i18n-placeholder="@@fullnamePlaceholder" [(ngModel)]="user.fullname" formControlName="fullname"
                       name="fullname" required>
@@ -70,19 +81,20 @@
                       <i class="fas fa-check"></i>
                     </div>
                   </div>
+                  <div *ngIf="isValidPersonal('fullname')" class='error-message' i18n="@@formFullnameEmpty">
+                      Preencha o nome completo.
+                    </div>
                 </div>
                 <div class="form-group">
-                  <div class="input-group">
-                    <div class="input-group-prepend desktop">
-                      <div class="input-group-text ">
-                        <i class="fas fa-mobile-alt"></i><span i18n="@@cellphone">Celular</span></div>
-                    </div>
-                    <!-- desktop -->
-                    <input type="tel" class="form-control desktop tel-mask" mask="{{ cellphoneMask }}"  placeholder="Vamos falar com você por aqui!"
-                      [(ngModel)]="user.cellphone" formControlName="cellphone" name="cellphone" i18n-placeholder="@@cellphonePlaceholder"  (keydown)='checkMaskCellphone($event)' (blur)="checkPhone()" required>
-                    <!-- mobile -->
-                    <i class="fas fa-mobile-alt mobile mobile-icon"></i>
-                    <input type="tel" class="form-control mobile tel-mask" mask="{{ cellphoneMask }}"  placeholder="Celular" [(ngModel)]="user.cellphone"
+
+                  <div class="input-group label-float">
+                        <i class="fas icon-ajust fa-mobile-alt"></i>
+                        <!-- <input type="text" class="form-control desktop" placeholder=" "/> -->
+                        <input type="tel" class="form-control ajust-input desktop tel-mask" mask="{{ cellphoneMask }}"  placeholder="Vamos falar com você por aqui!"
+                        [(ngModel)]="user.cellphone" formControlName="cellphone" name="cellphone" i18n-placeholder="@@cellphonePlaceholder"  (keydown)='checkMaskCellphone($event)' (blur)="checkPhone()" required>
+                        <label class="display-mobile" i18n="@@cellphone">Celular</label>
+                  </div>
+                    <input type="tel" class="form-control mobile ajust-input tel-mask" mask="{{ cellphoneMask }}"  placeholder="Celular" [(ngModel)]="user.cellphone"
                       formControlName="cellphone" name="cellphone" (blur)="checkPhone()"  (keydown)='checkMaskCellphone($event)' required>
                     <div class="valid-feedback">
                       <i class="fas fa-check"></i>
@@ -91,20 +103,15 @@
                   <div *ngIf="isValidPersonal('cellphone') || invalidPhone" class='error-message' i18n="@@formCellphoneEmpty">
                     Preencha o seu número de celular.
                   </div>
-                </div>
                 <div class="form-group">
-                  <div class="input-group">
-                    <div class="input-group-prepend desktop">
-                      <div class="input-group-text">
-                        <i class="fas fa-envelope"></i>E-mail</div>
-                    </div>
-                    <!-- desktop -->
-                    <input type="email" class="form-control desktop" placeholder="Relaxa, nós também não gostamos de spam" i18n-placeholder="@@emailPlaceholder" [(ngModel)]="user.email"
-                      (blur)="checkEmail()" formControlName="email" name="email" email required>
 
-                    <!-- mobile -->
-                    <i class="fas fa-envelope mobile-icon mobile"></i>
-                    <input type="email" class="form-control mobile" placeholder="Email" [(ngModel)]="user.email" i18n-placeholder="@@emailPlaceholder" (blur)="checkEmail()" formControlName="email"
+                  <div class="input-group label-float">
+                        <i class="fas icon-ajust fa-envelope"></i>
+                        <input type="email" class="form-control ajust-input desktop" placeholder="Relaxa, nós também não gostamos de spam" i18n-placeholder="@@emailPlaceholder" [(ngModel)]="user.email"
+                          (blur)="checkEmail()" formControlName="email" name="email" email required>
+                          <label class="display-mobile">E-mail</label>
+                  </div>
+                    <input type="email" class="form-control ajust-input mobile" placeholder="Email" [(ngModel)]="user.email" i18n-placeholder="@@emailPlaceholder" (blur)="checkEmail()" formControlName="email"
                       name="email" email required>
                     <div class="valid-feedback" *ngIf="!invalidEmail">
                       <i class="fa fa-check"></i>
@@ -115,18 +122,15 @@
                   </div>
                   <div *ngIf="isValidPersonal('email')" class='error-message' i18n='@@formEmailEmpty'>
                     Preencha com o seu email.
-                  </div>
                 </div>
                 <div class="form-group">
-                  <div class="input-group">
-                    <div class="input-group-prepend desktop">
-                      <div class="input-group-text">
-                        <i class="fas fa-gift"></i><span i18n="@@birthdate">Data de Nascimento</span></div>
-                    </div>
 
-                    <i class="fas fa-gift mobile mobile-icon"></i>
-                    <input class="form-control p-inputMask gv" id="inputDatadeNascimento" formControlName="birthdate" (blur)="checkDate()" placeholder="{{ placeholderBirthdate }}"
-                      [(ngModel)]="user.birthdate" name="birthdate" mask="00/00/0000" />
+                  <div class="input-group label-float">
+                        <i class="fas icon-ajust fa-gift"></i>
+                        <input class="form-control ajust-input p-inputMask gv" id="inputDatadeNascimento" formControlName="birthdate" (blur)="checkDate()" placeholder="{{ placeholderBirthdate }}"
+                        [(ngModel)]="user.birthdate" name="birthdate" mask="00/00/0000" />
+                        <label class="display-mobile" i18n="@@birthdate">Data de Nascimento</label>
+                    </div>
                     <div class="valid-feedback">
                       <i class="fas fa-check"></i>
                     </div>
@@ -136,7 +140,7 @@
                   </div>
                   <div *ngIf="!matchDate" class='error-message' i18n="@@formBirthdateError">
                     Desculpe, nossos programas são direcionados para pessoas entre 18 e 30 anos.
-                  </div>
+
                 </div>
 
                 <div class="form-group form-check text-center checkbox">
@@ -271,7 +275,7 @@
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-prepend desktop">
-                      <div class="input-group-text">
+                      <div class="input-group-text ajust-height">
                         <i class="fas fa-lock"></i><span i18n="@@password">Senha</span></div>
                     </div>
                     <!-- desktop -->
@@ -297,7 +301,7 @@
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-prepend desktop">
-                      <div class="input-group-text">
+                      <div class="input-group-text ajust-height">
                         <i class="fas fa-lock"></i><span i18n="@@confirmPassword">Confirmar Senha</span></div>
                     </div>
                     <!-- desktop -->
@@ -339,9 +343,8 @@
                 <div class="form-group experiences-input">
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
-                      <div class="input-group-text  input-group-text-without-input">
-                        <i class="fas fa-plane"></i>
-                        <span i18n="@@whenCanTravel">Quando pode viajar</span>
+                      <div class="input-group-text ajust-height">
+                        <i class="fas fa-plane"></i><span i18n="@@whenCanTravel">Quando pode viajar</span>
                       </div>
                     </div>
                     <div class="label-experience">
