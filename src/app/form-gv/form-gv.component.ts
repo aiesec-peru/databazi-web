@@ -67,14 +67,16 @@ export class FormGvComponent implements OnInit {
 
   placeholderBirthdate: string;
 
-  personalData: boolean = true;
-  studyData: boolean = false;
+  personalData: boolean = false;
+  studyData: boolean = true;
   persona : any;
 
   invalidEmail: boolean = false;
   invalidPassword: boolean = false;
   invalidDate: boolean = false;
   invalidPhone: boolean = false;
+  invalidUniversity: boolean = false;
+  invalidCourse: boolean = false;
   matchDate: boolean = true;
   loading: boolean = false;
   step1Form: FormGroup;
@@ -125,7 +127,7 @@ export class FormGvComponent implements OnInit {
       department: new FormControl(this.user.department, [
         Validators.required
       ]),
-      university_id: new FormControl(this.user.university, [
+      university_id: new FormControl(this.user.university.id, [
         Validators.required
       ]),
       city: new FormControl(this.user.city, [
@@ -194,6 +196,7 @@ export class FormGvComponent implements OnInit {
 
     this.filteredScholarityOptions = this.scholarityOptions;
     this.filteredCitiesOptions = this.citiesOptions;
+
     this.filteredDepartmentsOptions = this.departments;
 
     this.fillCourseSelect().then(() => {
@@ -201,6 +204,10 @@ export class FormGvComponent implements OnInit {
     });
 
     this.cellphoneMask = this.cellphoneDefaultMask;
+  }
+
+  getOptionText(option) {
+    return option.name;
   }
 
   checkPersonaValue(){
@@ -318,10 +325,8 @@ export class FormGvComponent implements OnInit {
     }
   }
 
-  filterCities(department){
-    this.citiesOptions = this.domainsService.getCities(department);
-    this.filteredCitiesOptions = of(this.citiesOptions);
-    this.user.city = { name: '' };
+  filterCities(event){
+    this.citiesOptions = this.domainsService.getCities({name: event.value.name});
   }
 
   filterUniversities(city) {
@@ -381,6 +386,22 @@ export class FormGvComponent implements OnInit {
     }
     else {
       this.invalidPassword = false;
+    }
+  }
+
+  checkUniversity() {
+    if (this.user.university.id == '') {
+      this.invalidUniversity = true;
+    } else {
+      this.invalidUniversity = false;
+    }
+  }
+
+  checkCourse() {
+    if (this.user.university.id == '') {
+      this.invalidCourse = true;
+    } else {
+      this.invalidCourse = false;
     }
   }
 
