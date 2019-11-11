@@ -10,6 +10,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
+import { CommonModule } from '@angular/common'
+
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
@@ -51,6 +53,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     routes,
     DragScrollModule,
     BrowserModule,

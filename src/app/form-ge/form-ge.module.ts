@@ -15,12 +15,25 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { SignupService } from '../services/signup.service';
 
+import {MatInputModule} from '@angular/material/input';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCardModule} from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
+
 @NgModule({
   declarations: [
   	FormGeComponent,
     FormGeThankYouComponent
   ],
   imports: [
+    MatSelectModule,
+    MatCardModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    MatAutocompleteModule,
+    MatInputModule,
     CommonModule,
     FormGeRoutingModule,
     TermsModule,

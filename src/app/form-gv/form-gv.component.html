@@ -2,7 +2,8 @@
   <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
 </head>
 
-<div id="step1" class="form-volutario-global relative-form" [ngClass]="{'full-screen': formedUser, 'full-screen-embedded': embeddedForm}">
+<div id="step1" class="form-volutario-global relative-form"
+  [ngClass]="{'full-screen': formedUser, 'full-screen-embedded': embeddedForm}">
   <div class="full-width">
     <!-- Header -->
     <section class="header" id="header-voluntario-global" #headerGVRef>
@@ -15,8 +16,10 @@
         <div *ngIf="!completedSignup">
           <div class="row" [ngClass]="{ headerB: formToggle }" *ngIf="!embeddedForm">
             <div class="col-sm">
-              <h1 i18n="@@formGvTitle">Conviértete en un <strong> Voluntario Global</strong>. Tenemos oportunidades especialmente para ti.
-                <strong>Vive la experiencia,</strong> cambia tu forma de ver el mundo e impacta positivamente en la sociedad.</h1>
+              <h1 i18n="@@formGvTitle">Conviértete en un <strong> Voluntario Global</strong>. Tenemos oportunidades
+                especialmente para ti.
+                <strong>Vive la experiencia,</strong> cambia tu forma de ver el mundo e impacta positivamente en la
+                sociedad.</h1>
             </div>
           </div>
           <br>
@@ -25,8 +28,8 @@
     </section>
 
     <!-- Form -->
-    <section class="forms" id="form-voluntario-global" class='animated fadeIn' *ngIf="!loading" [ngClass]="{formB : formToggle}"
-      (window:resize)="onResize($event)">
+    <section class="forms" id="form-voluntario-global" class='animated fadeIn' *ngIf="!loading"
+      [ngClass]="{formB : formToggle}" (window:resize)="onResize($event)">
       <div class="container">
         <div class="row justify-content-center">
 
@@ -34,17 +37,18 @@
 
             <!-- Content -->
             <!-- Alert -->
-            <div class="alert alert-warning alert-dismissible fade show animated fadeIn" role="alert" *ngIf="invalidEmail">
+            <div class="alert alert-warning alert-dismissible fade show animated fadeIn" role="alert"
+              *ngIf="invalidEmail">
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <i class="far fa-times-circle fa-lg"></i>
               </button>
               <p>
                 <span i18n="@@alreadyExistsUserEmail">Já existe um usuário com esse endereço de email!</span>
-                <br/>
+                <br />
                 <a href="https://auth.aiesec.org/users/sign_in?country=Peru#login" class="form-email-warning">
                   <strong i18n="@@accessThePlatformQuestion">Gostaria de acessar a plataforma?</strong>
                 </a>
-                <br/>
+                <br />
                 <a href="https://auth.aiesec.org/users/password/new" class="form-email-warning">
                   <strong i18n="@@recoverPlatformPassword">Recuperar minha senha</strong>
                 </a>
@@ -53,107 +57,77 @@
             <div class="animated fadeIn" *ngIf="personalData && !completedSignup">
               <form [formGroup]="step1Form" class="forms gv">
                 <div class="form-group">
+                  <i class="fas icon-ajust fa-user"></i>
 
-                  <div class="input-group label-float">
-                    <i class="fas icon-ajust fa-user"></i>
-                    <!-- <input type="text" class="form-control desktop" placeholder=" "/> -->
-                    <input type="text" class="form-control ajust-input" placeholder="Como é pra gente te chamar?" i18n-placeholder="@@fullnamePlaceholder" [(ngModel)]="user.fullname" formControlName="fullname"
-                      name="fullname" required>
-                    <label class="display-mobile">Nome Completo</label>
-                  </div>
-
-
-                  <div class="input-group label-float" style="display: none;">
-                    <!-- <div class="input-group-prepend desktop"> -->
-                      <div class="input-group-text">
-                          <i class="fas fa-user"></i><span i18n="@@fullname">Nome Completo</span>
-                      </div>
-                    <!-- </div> -->
-                    <!-- desktop -->
-                    <input type="text" class="form-control desktop" placeholder="Como é pra gente te chamar?" i18n-placeholder="@@fullnamePlaceholder" [(ngModel)]="user.fullname" formControlName="fullname"
-                      name="fullname" required>
-
-                    <!-- mobile -->
-                    <i class="fas fa-user mobile mobile-icon"></i>
-                    <input type="text" class="form-control mobile" placeholder="Nome completo" i18n-placeholder="@@fullnameMobilePlaceholder" [(ngModel)]="user.fullname" formControlName="fullname"
-                      name="fullname" required>
-                    <div class="valid-feedback">
-                      <i class="fas fa-check"></i>
-                    </div>
-                  </div>
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="text" [(ngModel)]="user.fullname" formControlName="fullname" name="fullname">
+                    <mat-placeholder i18n="@@fullnamePlaceholder" class="placeholder">Como é pra gente te chamar?
+                    </mat-placeholder>
+                  </mat-form-field>
                   <div *ngIf="isValidPersonal('fullname')" class='error-message' i18n="@@formFullnameEmpty">
-                      Preencha o nome completo.
-                    </div>
+                    Preencha o nome completo.
+                  </div>
                 </div>
                 <div class="form-group">
+                  <i class="fas icon-ajust fa-mobile-alt"></i>
 
-                  <div class="input-group label-float">
-                        <i class="fas icon-ajust fa-mobile-alt"></i>
-                        <!-- <input type="text" class="form-control desktop" placeholder=" "/> -->
-                        <input type="tel" class="form-control ajust-input desktop tel-mask" mask="{{ cellphoneMask }}"  placeholder="Vamos falar com você por aqui!"
-                        [(ngModel)]="user.cellphone" formControlName="cellphone" name="cellphone" i18n-placeholder="@@cellphonePlaceholder"  (keydown)='checkMaskCellphone($event)' (blur)="checkPhone()" required>
-                        <label class="display-mobile" i18n="@@cellphone">Celular</label>
-                  </div>
-                    <input type="tel" class="form-control mobile ajust-input tel-mask" mask="{{ cellphoneMask }}"  placeholder="Celular" [(ngModel)]="user.cellphone"
-                      formControlName="cellphone" name="cellphone" (blur)="checkPhone()"  (keydown)='checkMaskCellphone($event)' required>
-                    <div class="valid-feedback">
-                      <i class="fas fa-check"></i>
-                    </div>
-                  </div>
-                  <div *ngIf="isValidPersonal('cellphone') || invalidPhone" class='error-message' i18n="@@formCellphoneEmpty">
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="tel" class="tel-mask" mask="{{ cellphoneMask }}" [(ngModel)]="user.cellphone"
+                      formControlName="cellphone" name="cellphone" (keydown)='checkMaskCellphone($event)'
+                      (blur)="checkPhone()">
+                    <mat-placeholder i18n="@@cellphonePlaceholder" class="placeholder">Vamos falar com você por aqui!
+                    </mat-placeholder>
+                  </mat-form-field>
+                  <div *ngIf="isValidPersonal('cellphone') || invalidPhone" class='error-message'
+                    i18n="@@formCellphoneEmpty">
                     Preencha o seu número de celular.
                   </div>
-                <div class="form-group">
-
-                  <div class="input-group label-float">
-                        <i class="fas icon-ajust fa-envelope"></i>
-                        <input type="email" class="form-control ajust-input desktop" placeholder="Relaxa, nós também não gostamos de spam" i18n-placeholder="@@emailPlaceholder" [(ngModel)]="user.email"
-                          (blur)="checkEmail()" formControlName="email" name="email" email required>
-                          <label class="display-mobile">E-mail</label>
-                  </div>
-                    <input type="email" class="form-control ajust-input mobile" placeholder="Email" [(ngModel)]="user.email" i18n-placeholder="@@emailPlaceholder" (blur)="checkEmail()" formControlName="email"
-                      name="email" email required>
-                    <div class="valid-feedback" *ngIf="!invalidEmail">
-                      <i class="fa fa-check"></i>
-                    </div>
-                    <div class="invalid-feedback"><span i18n="@@mandatoryField">Campo obrigatório</span>
-                      <i class="fas fa-times"></i>
-                    </div>
-                  </div>
-                  <div *ngIf="isValidPersonal('email')" class='error-message' i18n='@@formEmailEmpty'>
-                    Preencha com o seu email.
-                </div>
-                <div class="form-group">
-
-                  <div class="input-group label-float">
-                        <i class="fas icon-ajust fa-gift"></i>
-                        <input class="form-control ajust-input p-inputMask gv" id="inputDatadeNascimento" formControlName="birthdate" (blur)="checkDate()" placeholder="{{ placeholderBirthdate }}"
-                        [(ngModel)]="user.birthdate" name="birthdate" mask="00/00/0000" />
-                        <label class="display-mobile" i18n="@@birthdate">Data de Nascimento</label>
-                    </div>
-                    <div class="valid-feedback">
-                      <i class="fas fa-check"></i>
-                    </div>
-                  </div>
-                  <div *ngIf="invalidDate" class='error-message' i18n="@@formBirthdateInvalid">
-                    Por favor, preencha com uma data válida
-                  </div>
-                  <div *ngIf="!matchDate" class='error-message' i18n="@@formBirthdateError">
-                    Desculpe, nossos programas são direcionados para pessoas entre 18 e 30 anos.
-
                 </div>
 
-                <div class="form-group form-check text-center checkbox">
-                  <input type="checkbox" class="form-check-input" [checked]="user.cellphone_contactable" id="aceitoContato" [(ngModel)]="user.cellphone_contactable"
-                    formControlName="cellphone_contactable" name="cellphone_contactable">
-                  <label class="form-check-label" for="aceitoContato" i18n="@@cellphoneContactable"> Gostaria de ser contatado por ligação ou mensagens no meu número de celular.</label>
+                <div class="form-group">
+                  <i class="fas icon-ajust fa-envelope"></i>
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="email" [(ngModel)]="user.email" (blur)="checkEmail()" formControlName="email"
+                      name="email" email>
+                    <mat-placeholder i18n="@@emailPlaceholder" class="placeholder">Relaxa, nós também não gostamos de
+                      spam</mat-placeholder>
+                  </mat-form-field>
+                </div>
+                <div *ngIf="isValidPersonal('email')" class='error-message' i18n='@@formEmailEmpty'>
+                  Preencha com o seu email.
+                </div>
+
+                <div class="form-group example-form">
+                  <i class="fas icon-ajust fa-gift"></i>
+
+                  <mat-form-field class="example-full-width">
+                    <input matInput id="inputDatadeNascimento" formControlName="birthdate" (blur)="checkDate()"
+                      [(ngModel)]="user.birthdate" name="birthdate" mask="00/00/0000">
+                    <mat-placeholder i18n="@@birthdate" class="placeholder">Data de Nascimento</mat-placeholder>
+                  </mat-form-field>
+                </div>
+                <div *ngIf="invalidDate" class='error-message' i18n="@@formBirthdateInvalid">
+                  Por favor, preencha com uma data válida
+                </div>
+                <div *ngIf="!matchDate" class='error-message' i18n="@@formBirthdateError">
+                  Desculpe, nossos programas são direcionados para pessoas entre 18 e 30 anos.
+                </div>
+
+                <div class="form-group form-check text-center checkbox backgroud-none">
+                  <input type="checkbox" class="form-check-input" [checked]="user.cellphone_contactable"
+                    id="aceitoContato" [(ngModel)]="user.cellphone_contactable" formControlName="cellphone_contactable"
+                    name="cellphone_contactable">
+                  <label class="form-check-label" for="aceitoContato" i18n="@@cellphoneContactable"> Gostaria de ser
+                    contatado por ligação ou mensagens no meu número de celular.</label>
                 </div>
 
                 <!-- Termos -->
-                <div class="form-group form-check text-center checkbox">
-                  <input type="checkbox" class="form-check-input" [checked]="user.accepted_terms" id="aceitoTermos" [(ngModel)]="user.accepted_terms"
-                    formControlName="accepted_terms" name="accepted_terms">
-                  <label class="form-check-label" for="aceitoTermos"><a href="assets/terms/Terminos y Condiciones - AIESEC en Perú.pdf" target="_blank" i18n="@@termsAndConditionsConfirmation">Li e aceito os termos e condições.</a></label>
+                <div class="form-group form-check text-center checkbox backgroud-none">
+                  <input type="checkbox" class="form-check-input" [checked]="user.accepted_terms" id="aceitoTermos"
+                    [(ngModel)]="user.accepted_terms" formControlName="accepted_terms" name="accepted_terms">
+                  <label class="form-check-label" for="aceitoTermos"><a
+                      href="assets/terms/Terminos y Condiciones - AIESEC en Perú.pdf" target="_blank"
+                      i18n="@@termsAndConditionsConfirmation">Li e aceito os termos e condições.</a></label>
                 </div>
 
               </form>
@@ -162,223 +136,170 @@
             <div class="animated fadeIn" *ngIf="studyData && !completedSignup">
               <form [formGroup]="step2Form" class="forms">
                 <div class="form-group scholarity">
-                  <div class="input-group select-dropdown">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="fas fa-graduation-cap"></i><span i18n='@@scholarity'>Escolaridade</span></div>
-                    </div>
-                    <div class="dropdown">
-                      <div class="styled-select">
-                        <p-autoComplete [(ngModel)]="user.scholarity" (onSelect)="changeScholarity(user.scholarity.id)" [suggestions]="filteredScholarityOptions"
-                          (completeMethod)="searchScholarity($event)" #scholarityAutocomplete (onFocus)="selectInput('scholarity');scholarityAutocomplete.handleDropdownClick();"
-                          dropdownMode="current" field="name" formControlName="scholarity" emptyMessage="Nenhum resultado" placeholder="Qual seu nível de escolaridade?" i18n-emptyMessage="@@noResults" i18n-placeholder="@@scholarityPlaceholder"></p-autoComplete>
-                        <i class="fas fa-times autocomplete-clear-btn" (click)="clearField('scholarity')" *ngIf="user.scholarity"></i>
-                      </div>
-                    </div>
-                  </div>
+                  <i class="fas icon-ajust fa-graduation-cap"></i>
+                  <mat-form-field class="example-full-width">
+                    <mat-select [(ngModel)]="user.scholarity" name formControlName="scholarity">
+                      <mat-option *ngFor="let option of scholarityOptions" [value]="option">
+                        {{option.name}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-placeholder i18n='@@scholarity' class="placeholder">Escolaridade</mat-placeholder>
+                  </mat-form-field>
                   <div *ngIf="isValidStudy('scholarity')" class='error-message' i18n='@@formScholarityEmpty'>
                     Selecione um nível de escolaridade
                   </div>
                 </div>
 
                 <div class="form-group department">
-                  <div class="input-group select-dropdown">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="fas fa-home"></i>
-                        <span i18n="@@department">Departamento</span>
-                      </div>
-                    </div>
-                    <div class="dropdown">
-                      <div class="styled-select">
-                        <p-autoComplete [(ngModel)]="user.department" [suggestions]="filteredDepartmentsOptions" (completeMethod)="searchDepartments($event)"
-                          #departmentsAutocomplete (onFocus)="selectInput('department'); departmentsAutocomplete.handleDropdownClick();" dropdownMode="current"
-                          field="name" formControlName="department" name='department' emptyMessage="Nenhum resultado" placeholder="Departamento"
-                          i18n-emptyMessage="@@noResults" i18n-placeholder="@@departmentPlaceholder" (onSelect)="filterCities(user.department)"></p-autoComplete>
-                        <i class="fas fa-times autocomplete-clear-btn" (click)="clearField('department')" *ngIf="user.department"></i>
-                      </div>
-                    </div>
-                  </div>
+                  <i class="fas icon-ajust fa-home"></i>
+                  <mat-form-field class="example-full-width">
+                    <mat-select (selectionChange)="filterCities($event)" [(ngModel)]="user.department"
+                      formControlName="department">
+                      <mat-option *ngFor="let option of filteredDepartmentsOptions" [value]="option"
+                        i18n-emptyMessage="@@noResults" i18n-placeholder="@@departmentPlaceholder">
+                        {{option.name}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-placeholder i18n="@@department" class="placeholder">Departamento</mat-placeholder>
+                  </mat-form-field>
                   <div *ngIf="isValidStudy('department')" class='error-message' i18n="@@formDepartmentEmpty">
                     Por favor, selecione seu departamento
                   </div>
                 </div>
 
                 <div class="form-group city">
-                  <div class="input-group select-dropdown">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="fas fa-home"></i>
-                        <span i18n="@@city">Cidade</span>
-                      </div>
-                    </div>
-                    <div class="dropdown">
-                      <div class="styled-select">
-                        <p-autoComplete [(ngModel)]="user.city" [suggestions]="filteredCitiesOptions" (completeMethod)="searchCities($event)" (onKeyUp)='checkCityValue()'
-                          #citiesAutocomplete (onFocus)="selectInput('city'); citiesAutocomplete.handleDropdownClick();" dropdownMode="current"
-                          field="name" formControlName="city" name='city' emptyMessage="Nenhum resultado" placeholder="Cidade onde estuda"
-                          i18n-emptyMessage="@@noResults" i18n-placeholder="@@cityPlaceholder" (onSelect)="filterUniversities(user.city)"></p-autoComplete>
-                        <i class="fas fa-times autocomplete-clear-btn" (click)="clearField('city')" *ngIf="user.city"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div *ngIf="isValidStudy('city')" class='error-message' i18n="@@formCityEmpty">
-                    Por favor, selecione sua cidade
-                  </div>
+                  <i class="fas icon-ajust fa-home"></i>
+                  <mat-form-field class="example-full-width">
+                    <mat-select [(ngModel)]="user.city" formControlName="city"
+                      (selectionChange)="filterUniversities(user.city)">
+                      <mat-option *ngFor="let option of citiesOptions" [value]="option">
+                        {{option.name}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-placeholder i18n="@@city" class="placeholder">Cidade</mat-placeholder>
+                  </mat-form-field>
+                </div>
+                <div *ngIf="isValidStudy('city')" class='error-message' i18n="@@formCityEmpty">
+                  Por favor, selecione sua cidade
                 </div>
 
-                <div class="animated fadeIn faster form-group  university" *ngIf='user.city.name && user.scholarity.id > 1'>
-                  <div class="input-group select-dropdown">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span i18n="@@university">Universidade</span>
-                      </div>
-                    </div>
-                    <div class="dropdown">
-                      <div class="styled-select">
-                        <p-autoComplete [(ngModel)]="user.university" [suggestions]="universities" (completeMethod)="searchUnivesity($event)" #universityAutocomplete
-                          (onFocus)="selectInput('university');universityAutocomplete.handleDropdownClick();" (keyup)='checkUniversityValue($event)'
-                          dropdownMode="current" field="name" formControlName="university_id" emptyMessage="Nenhum resultado" placeholder="¿Donde estudias?"
-                          i18n-emptyMessage="@@noResults"></p-autoComplete>
-                        <i class="fas fa-times autocomplete-clear-btn" (click)="clearField('university')" *ngIf="user.university"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div *ngIf="isValidStudy('university_id')" class='error-message' i18n="@@formUniversityEmpty">
-                    Selecione uma universidade.
-                  </div>
+                <div class="animated fadeIn faster form-group university"
+                  *ngIf='user.city.name && user.scholarity.id > 1'>
+                  <i class="fas icon-ajust fa-graduation-cap"></i>
+                  <mat-form-field class="example-full-width">
+                    <input type="text" aria-label="Number" [(ngModel)]="user.university" formControlName="university_id"
+                      matInput [matAutocomplete]="auto" (selectionChange)='checkUniversityValue($event)'
+                      (blur)="checkUniversity()" name="user.university">
+                    <mat-autocomplete #auto="matAutocomplete" [displayWith]="getOptionText">
+                      <mat-option *ngFor="let option of universities" [value]="option">
+                        {{option.name}}
+                      </mat-option>
+                    </mat-autocomplete>
+                    <mat-placeholder i18n="@@university" class="placeholder">Universidade</mat-placeholder>
+                  </mat-form-field>
+                </div>
+                <div *ngIf="isValidStudy('university_id') || invalidUniversity" class='error-message animated fadeIn'
+                  i18n="@@formUniversityEmpty">
+                  Selecione uma universidade.
                 </div>
 
-                <div class=" animated fadeIn faster form-group college_course" *ngIf='user.city.name && user.scholarity.id > 1'>
-                  <div class="input-group select-dropdown">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="fas fa-book-open"></i><span i18n='@@collegeCourse'>Curso</span></div>
-                    </div>
-                    <div class="dropdown">
-                      <div class="styled-select">
-                        <p-autoComplete [(ngModel)]="user.college_course" [suggestions]="filteredCourses" (completeMethod)="searchCourses($event)"
-                          #coursesAutocomplete (onFocus)="selectInput('college_course');coursesAutocomplete.handleDropdownClick();" dropdownMode="current"
-                          field="name" formControlName="college_course_id" emptyMessage="Nenhum resultado" placeholder="Insira seu curso"
-                          i18n-emptyMessage="@@noResults" i18n-placeholder="@@collegeCoursePlaceholder"></p-autoComplete>
-                        <i class="fas fa-times autocomplete-clear-btn" (click)="clearField('college_course')" *ngIf="user.college_course"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div *ngIf="isValidStudy('college_course_id')" class='error-message' i18n="@@formCollegeCourseEmpty">
-                    Selecione um curso.
-                  </div>
+                <div class="animated fadeIn faster form-group college_course"
+                  *ngIf='user.city.name && user.scholarity.id > 1'>
+                  <i class="fas icon-ajust fa-book-open"></i>
+                  <mat-form-field class="example-full-width">
+                    <input type="text" aria-label="Number" [(ngModel)]="user.college_course"
+                      formControlName="college_course_id" matInput [matAutocomplete]="auto" (blur)="checkCourse">
+                    <mat-autocomplete #auto="matAutocomplete" [displayWith]="getOptionText">
+                      <mat-option *ngFor="let option of courses" [value]="option">
+                        {{option.name}}
+                      </mat-option>
+                    </mat-autocomplete>
+                    <mat-placeholder i18n='@@collegeCourse' class="placeholder">Curso</mat-placeholder>
+                  </mat-form-field>
+                </div>
+                <div *ngIf="isValidStudy('college_course_id') || invalidCourse" class='error-message animated fadeIn'
+                  i18n="@@formCollegeCourseEmpty">
+                  Selecione um curso.
                 </div>
 
                 <!-- Password -->
-                <div class="form-group">
+                <div class="form-group example-form">
                   <div class="input-group">
-                    <div class="input-group-prepend desktop">
-                      <div class="input-group-text ajust-height">
-                        <i class="fas fa-lock"></i><span i18n="@@password">Senha</span></div>
-                    </div>
-                    <!-- desktop -->
-                    <input type="password" class="form-control desktop" placeholder="É para o seu perfil no aiesec.org" i18n-placeholder="@@passwordPlaceholder" [(ngModel)]="user.password"
-                      formControlName="password" name="password" required (blur)="checkPassword()">
-
-                    <!-- mobile -->
-                    <i class="fas fa-lock mobile mobile-icon"></i>
-                    <input type="password" class="form-control mobile" placeholder="Senha" [(ngModel)]="user.password" formControlName="password"
-                      name="password" required (blur)="checkPassword()">
-                    <div class="valid-feedback">
-                      <i class="fas fa-check"></i>
-                    </div>
-                  </div>
-                  <div *ngIf="isValidStudy('password')" class='error-message animated fadeIn' [hidden]="!user.password">
-                      Completa tu contraseña.
-                      <br>
-                    <span>
-                      Tu contraseña debe contener al menos 8 caractéres, de los cuales uno debe ser un caracter en mayúscula, otro en minúscula, y un número.
-                    </span>
+                    <i class="fas icon-ajust fa-lock"></i>
+                    <mat-form-field class="example-full-width">
+                      <input matInput type="password" [(ngModel)]="user.password" formControlName="password"
+                        name="password" (blur)="checkPassword()">
+                      <mat-placeholder i18n="@@password" class="placeholder">Senha</mat-placeholder>
+                    </mat-form-field>
                   </div>
                 </div>
+                <div *ngIf="isValidStudy('password')" class='error-message animated fadeIn' [hidden]="!user.password">
+                  Completa tu contraseña.
+                  <br>
+                  <span>
+                    Tu contraseña debe contener al menos 8 caractéres, de los cuales uno debe ser un caracter en
+                    mayúscula, otro en minúscula, y un número.
+                  </span>
+                </div>
+
                 <div class="form-group">
                   <div class="input-group">
-                    <div class="input-group-prepend desktop">
-                      <div class="input-group-text ajust-height">
-                        <i class="fas fa-lock"></i><span i18n="@@confirmPassword">Confirmar Senha</span></div>
-                    </div>
-                    <!-- desktop -->
-                    <input type="password" class="form-control desktop" placeholder="" [(ngModel)]="user.repassword" formControlName="repassword"
-                      name="repassword" required (blur)="checkPassword()">
-
-                    <!-- mobile -->
-                    <i class="fas fa-lock mobile mobile-icon"></i>
-                    <input type="password" class="form-control mobile" [(ngModel)]="user.repassword" formControlName="repassword" name="repassword"
-                      required placeholder="Confirmar senha" (blur)="checkPassword()">
-                    <div class="valid-feedback">
-                      <i class="fas fa-check"></i>
-                    </div>
+                    <i class="fas icon-ajust fa-lock"></i>
+                    <mat-form-field class="example-full-width">
+                      <input matInput type="password" [(ngModel)]="user.repassword" formControlName="repassword"
+                        name="repassword" (blur)="checkPassword()">
+                      <mat-placeholder i18n="@@confirmPassword" class="placeholder">Confirmar Senha</mat-placeholder>
+                    </mat-form-field>
                   </div>
                 </div>
                 <div *ngIf="invalidPassword" class='error-message' i18n="@@formPasswordError">
                   <span>¡Las contraseñas no coinciden! Escribe nuevamente</span>
                 </div>
-                <div class="form-group getToKnow" *ngIf='!persona'>
-                  <div class="input-group select-dropdown">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="fas fa-question-circle"></i>
-                        <span i18n='@@exchangeReasonGV'>Qual é a principal razão pela qual você quer ser um Voluntário Global?</span>
-                      </div>
-                    </div>
-                    <div class="dropdown">
-                      <select required [(ngModel)]='user.exchange_reason' name='exchange_reason' formControlName='exchange_reason' class='select-without-background'>
-                        <option value='' i18n='@@referralTypeOption'> Selecione uma opção </option>
-                        <option *ngFor='let option of reasonOptions' [ngValue]='option.id'> {{ option.value }}</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div *ngIf="isValidStudy('exchange_reason')" class='error-message'>
-                    Por favor, selecione um valor
-                  </div>
-                </div>
 
-                <div class="form-group experiences-input">
-                  <div class="input-group select-dropdown">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text ajust-height">
-                        <i class="fas fa-plane"></i><span i18n="@@whenCanTravel">Quando pode viajar</span>
-                      </div>
-                    </div>
-                    <div class="label-experience">
-                      <span i18n="@@whenCanTravelAvailable">Escolha o período de tempo que você estará disponível</span>
-                    </div>
-                  </div>
-                  <div class="form-checkbox-select">
-                    <div class="checkbox-item" *ngFor="let travel of travelOptions">
-                      <label>
-                        <input type="radio" value="{{travel.id}}" [(ngModel)]="user.when_can_travel" name='when_can_travel' formControlName="when_can_travel"> {{travel.name}}
-                      </label>
-                    </div>
-                  </div>
+                <div class="form-group getToKnow" *ngIf='!persona'>
+                  <i class="fas icon-ajust fa-question-circle"></i>
+                  <mat-form-field class="example-full-width">
+                    <mat-select [(ngModel)]="user.exchange_reason" name='exchange_reason'
+                      formControlName="exchange_reason">
+                      <mat-option *ngFor="let option of reasonOptions" [value]='option.id'>
+                        {{option.value}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-placeholder class="placeholder">Por qué quieres ser un voluntario global?</mat-placeholder>
+                  </mat-form-field>
+                </div>
+                <div *ngIf="isValidStudy('exchange_reason')" class='error-message'>
+                  Por favor, selecione um valor
                 </div>
 
                 <div class="form-group getToKnow">
-                  <div class="input-group select-dropdown">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <span i18n='@@referralType'>Como conheceu a AIESEC?</span>
-                      </div>
-                    </div>
-                    <div class="dropdown">
-                      <select required [(ngModel)]='user.referral_type' name='referral_type' formControlName='referral_type' class='select-without-background'>
-                        <option value='' i18n='@@referralTypeOption'> Selecione uma opção </option>
-                        <option *ngFor='let option of referralTypes' [ngValue]='option.id'> {{ option.value }}</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div *ngIf="isValidStudy('referral_type')" class='error-message'>
-                    Por favor, selecione um valor
-                  </div>
+                  <i class="fas icon-ajust fa-question-circle"></i>
+                  <mat-form-field class="example-full-width">
+                    <mat-select [(ngModel)]="user.referral_type" formControlName="referral_type" name='referral_type'>
+                      <mat-option *ngFor="let option of referralTypes" [value]="option.id">
+                        {{option.value}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-placeholder i18n='@@referralType' class="placeholder">Como conheceu a AIESEC?</mat-placeholder>
+                  </mat-form-field>
+                </div>
+                <div *ngIf="isValidStudy('referral_type')" class='error-message'>
+                  Por favor, selecione um valor
                 </div>
 
+                <div class="form-group align-left-itens experiences-input">
+                  <i class="fas icon-ajust-check fa-plane"></i>
+                  <mat-card>
+                    <h2>Elige cuánto tiempo estarás disponible</h2>
+                    <mat-card-content class="checkbox-ajust">
+                      <mat-radio-group [(ngModel)]="user.when_can_travel" formControlName="when_can_travel"
+                        *ngFor="let travel of travelOptions">
+                        <mat-radio-button class="ajust-inline col-sm" type="radio" value="{{travel.id}}">{{travel.name}}
+                        </mat-radio-button>
+                      </mat-radio-group>
+                    </mat-card-content>
+                  </mat-card>
+                </div>
               </form>
             </div>
 
@@ -392,7 +313,8 @@
                     <div class="row justify-content-center">
                       <div class="col-sm-9" id="header-resultado">
                         <h2 i18n="@@thanksForSubscribleText">Obrigado por se increver!</h2>
-                        <h3 i18n="@@thanksForSubscribleMessage">Fique ligado no seu e-mail que enviaremos informações úteis para você por lá.</h3>
+                        <h3 i18n="@@thanksForSubscribleMessage">Fique ligado no seu e-mail que enviaremos informações
+                          úteis para você por lá.</h3>
                       </div>
                       <div class="col-sm-3">
                         <i class="fas fa-thumbs-up fa-10x color-icon"></i>
@@ -401,10 +323,13 @@
                     <div class="row justify-content-center">
                       <div class="col-sm-12" id="content-resultado">
                         <p i18n="@@registerResult">
-                          Agora que você criou a sua conta, você poderá acessar a nossa plataforma e começar a buscar por projetos de intercâmbio voluntário
-                          na data e destino ideal para você! Fique atento ao seu e-mail onde enviaremos mais informações.
+                          Agora que você criou a sua conta, você poderá acessar a nossa plataforma e começar a buscar
+                          por projetos de intercâmbio voluntário
+                          na data e destino ideal para você! Fique atento ao seu e-mail onde enviaremos mais
+                          informações.
                         </p>
-                        <button (click)="accessAiesec()" type="button" class="btn btn-primary" i18n="@@accesOpportunitiesPortal">Acessar o Portal de Oportunidades</button>
+                        <button (click)="accessAiesec()" type="button" class="btn btn-primary"
+                          i18n="@@accesOpportunitiesPortal">Acessar o Portal de Oportunidades</button>
                       </div>
                     </div>
                   </div>
@@ -412,13 +337,17 @@
               </div>
             </section>
 
-            <div class="form-row buttons" *ngIf="!completedSignup" id="row-with-buttons">
+            <div class="form-row ajust-form-env buttons" *ngIf="!completedSignup" id="row-with-buttons">
               <div class="col text-left">
-                <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="cancelSignUp()" data-target="#modalCancelar1">{{formedUser || submittedPersonal ? 'Regresar' : 'Cancelar'}}</button>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="cancelSignUp()"
+                  data-target="#modalCancelar1">{{formedUser || submittedPersonal ? 'Regresar' : 'Cancelar'}}</button>
               </div>
               <div class="col text-right">
-                <button type="button" (click)="registerUser(headerGVRef)" class="btn btn-primary" *ngIf="personalData" [disabled]='step1Form.invalid || (!matchDate || invalidEmail) || !user.accepted_terms' i18n="@@next">Próximo</button>
-                <button type="button" (click)="submit(headerGVRef)" class="btn btn-primary submit-form" *ngIf="studyData" [disabled]='unableToSubmit()' i18n="@@send">
+                <button type="button" (click)="registerUser(headerGVRef)" class="btn btn-primary" *ngIf="personalData"
+                  [disabled]='step1Form.invalid || (!matchDate || invalidEmail) || !user.accepted_terms'
+                  i18n="@@next">Próximo</button>
+                <button type="button" (click)="submit(headerGVRef)" class="btn btn-primary submit-form"
+                  *ngIf="studyData" [disabled]='unableToSubmit()' i18n="@@send">
                   Enviar
                   <i class="fab fa-telegram-plane"></i>
                 </button>

@@ -2,6 +2,7 @@
 @import '~animate.css/animate.min.css';
 @import '~node_modules/primeng/resources/themes/nova-light/theme.css';
 @import '~node_modules/primeng/resources/primeng.min.css';
+@import '~node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
 // form A/B - start
 a {
     color: white;
@@ -501,11 +502,6 @@ select:-webkit-autofill:focus {
     }
 }
 
-#inputDatadeNascimento {
-    text-align: right;
-    padding: inherit 0 !important
-}
-
 .logo {
     margin: 40px 0 40px 0;
 }
@@ -529,7 +525,15 @@ strong {
 .icon-ajust {
   z-index: 1111;
   position: absolute;
-  margin-top: 15px;
+  margin-top: 22px;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.icon-ajust-check {
+  z-index: 1111;
+  position: absolute;
+  margin-top: 8px;
   margin-left: 10px;
   margin-right: 15px;
 }
@@ -907,10 +911,6 @@ label {
     margin-top: 10px;
 }
 
-.buttons {
-    margin: 30px 0 20px 0;
-}
-
 .btn-info.focus,
 .btn-info:focus {
     box-shadow: none;
@@ -1129,7 +1129,7 @@ label {
 @media (max-width: 767px) {
     //prime
     ::ng-deep .p-inputMask input {
-        text-align: right;
+        text-align: left;
         margin: 0;
         min-width: 100%;
         padding: 10px 0 6px 12px;
@@ -1230,7 +1230,7 @@ label {
         font-weight: lighter;
         color: #fff;
         padding-right: 10px;
-        text-align: right;
+        text-align: left;
     }
     .input-group-text {
         font-size: 14px;
@@ -1944,80 +1944,181 @@ label.input-terms-label {
   height: 50px;
 }
 
-/*float label*/
+/*
+float label
+*/
 
-@media (min-width: 601px ) {
-  .label-float{
-    position: relative;
-    text-align: center !important;
+@media(max-width: 2600px) {
+  .checkbox-ajust {
+    margin-left: -10px;
   }
 
-  .label-float input{
-    position: absolute;
+  .align-left-itens {
+    margin-bottom: 65px !important;
+  }
+}
+
+@media(max-width: 601px) {
+  .align-left-itens {
+    margin-bottom: 90px !important;
+  }
+}
+
+@media(min-width: 601px) {
+  .form-group {
+    height: 48px !important;
+    background-color: #ED472D !important;
+  }
+
+  .example-full-width {
+    width: 100% !important;
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+  }
+
+  .example-full-width input, input[type="text"]::placeholder {
+    color: #fff !important;
+  }
+
+  .placeholder {
+    font-size: 18px;
+    color: #fff;
+    padding-top: 3px;
+  }
+
+  .mat-form-field input {
+    border-bottom: none !important;
+  }
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example-container > * {
+    width: 100%;
+  }
+
+  .mat-card {
+    color: #fff;
+    padding: 0px 30px 0px 30px;
+    margin-bottom: 10px;
+    background-color: #ED472D !important;
+    box-shadow: none !important;
+  }
+
+  .mat-card h2 {
+    font-size: 18px;
+    padding: 5px 5px 0px;
+    margin-bottom: 10px !important;
+  }
+
+  .mat-radio-outer-circle{
+    border-color: #fff !important;
+  }
+
+  .ajust-checkbox {
+    display: flex;
+  }
+
+  .ajust-inline {
+    display: inline;
+  }
+}
+
+@media(max-width: 600px) {
+  .form-group {
+    height: 48px !important;
+    background-color: #ED472D !important;
+  }
+
+  .example-full-width {
+    width: 100% !important;
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+  }
+
+  .example-full-width input, input[type="text"]::placeholder {
+    color: #fff !important;
+  }
+
+  .placeholder {
+    font-size: 18px;
+    color: #fff;
+    padding-top: 3px;
+  }
+
+  .mat-form-field input {
+    border-bottom: none !important;
+  }
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example-container > * {
+    width: 100%;
+  }
+
+  .mat-card {
+    color: #fff !important;
+    padding: 0px 30px 0px 30px;
+    margin-bottom: 10px;
+    background-color: #ED472D !important;
+    box-shadow: none !important;
+  }
+
+  .mat-card h2 {
+    font-size: 18px;
+    padding: 5px 5px 0px;
+    margin-bottom: 10px !important;
+  }
+
+  .mat-radio-outer-circle{
+    border-color: #fff !important;
+  }
+
+  .ajust-checkbox {
+    display: flex;
+  }
+
+  .ajust-inline {
+    display: inline;
+  }
+}
+
+@media(max-width: 441px) {
+  .align-left-itens {
+    margin-bottom: 140px !important;
     text-align: left !important;
-    border: 0;
-    border-bottom: 2px solid lightgrey;
-    padding-left: 34px;
-    padding-top: 20px !important;
-    outline: none;
-    min-width: 180px;
-    font-size: 16px;
-    transition: all .3s ease-out;
-    -webkit-transition: all .3s ease-out;
-    -moz-transition: all .3s ease-out;
-    -webkit-appearance:none;
-    border-radius: 0;
-  }
-
-  .label-float input::placeholder{
-    color:transparent;
-  }
-
-  .label-float label{
-    margin-bottom: 4px;
-    text-align: center !important;
-    pointer-events: none;
-    position: absolute;
-    padding-left: 25px;
-    left: 10px;
-    margin-top: 12px;
-    transition: all .3s ease-out;
-    -webkit-transition: all .3s ease-out;
-    -moz-transition: all .3s ease-out;
-  }
-
-  .ajust-input {
-    text-align: center;
-  }
-
-  .label-float input:focus + label,
-  .label-float input:not(:placeholder-shown) + label{
-    font-size: 13px;
-    margin-top: 3px;
-    z-index: 999;
-  }
-
-  .label-experience {
-    padding-top: 12px !important;
-  }
-
-  .label-experience span{
-    padding: 12px 0px 6px 12px;
-  }
-
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
-}
-}
-
-@media(max-width:600px){
-  .ajust-input{
-    padding-left: 34px;
-  }
-  .display-mobile {
-    display:none !important;
   }
 }
+
+@media(max-width: 276px) {
+  .align-left-itens {
+    margin-bottom: 160px !important;
+    text-align: left !important;
+  }
+}
+
+.backgroud-none {
+  background: none !important;
+}
+
+.buttons {
+  margin: -10px 0 20px;
+}
+
+.mat-option {
+  color: black !important
+}
+// .example-form {
+//   min-width: 150px;
+//   max-width: 500px;
+//   width: 100%;
+// }
+
+// .example-full-width {
+//   width: 100%;
+// }
