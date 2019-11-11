@@ -75,7 +75,7 @@ $my-dark-theme-foreground: (
 
 // The rest of this is like a normal theme.scss file. The only difference being that we use create-wonky-theme instead of mat-light-theme
 $custom-theme-primary: mat-palette($mat-gray, 500);
-$custom-theme-accent: mat-palette($mat-blue);
+$custom-theme-accent: mat-palette($mat-grey, 50);
 $custom-theme-warn: mat-palette($mat-brown, 100);
 
 $custom-theme: create-wonky-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);

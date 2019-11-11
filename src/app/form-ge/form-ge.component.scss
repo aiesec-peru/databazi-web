@@ -340,7 +340,7 @@ _:-o-prefocus,
     border: 0 !important;
     position: relative;
     flex: 1 1 auto;
-    text-align: right;
+    text-align: left;
     margin: 0;
     min-width: 400px;
     padding: 10px 30px 6px 12px;
@@ -472,7 +472,7 @@ select:-webkit-autofill:focus {
 }
 
 #inputDatadeNascimento {
-    text-align: right;
+    text-align: left;
     padding: inherit 0 !important
 }
 
@@ -545,7 +545,7 @@ section.header h1 {
     background-color: rgba(255, 255, 255, .25);
     box-sizing: border-box;
     display: flex;
-    align-items: center; 
+    align-items: center;
     .row {
         display: flex;
         align-items: center;
@@ -617,7 +617,7 @@ section.header h1 {
 input::-webkit-input-placeholder {
     font-size: 13px;
     font-weight: lighter;
-    text-align: right;
+    text-align: left;
     padding-right: 30px;
     font-style: italic;
 }
@@ -626,7 +626,7 @@ input:-moz-placeholder {
     /* Firefox 18- */
     font-size: 13px;
     font-weight: lighter;
-    text-align: right;
+    text-align: left;
     padding-right: 30px;
     font-style: italic;
 }
@@ -635,7 +635,7 @@ input::-moz-placeholder {
     /* Firefox 19+ */
     font-size: 13px;
     font-weight: lighter;
-    text-align: right;
+    text-align: left;
     padding-right: 30px;
     font-style: italic;
 }
@@ -643,7 +643,7 @@ input::-moz-placeholder {
 input:-ms-input-placeholder {
     font-size: 13px;
     font-weight: lighter;
-    text-align: right;
+    text-align: left;
     padding-right: 30px;
     font-style: italic;
 }
@@ -655,7 +655,7 @@ input[type=tel] {
     font-size: 16px;
     font-weight: lighter;
     padding-right: 30px;
-    text-align: right;
+    text-align: left;
 }
 
 input[type=text]:focus,
@@ -686,7 +686,7 @@ input[type=tel] {
 .text-muted {
     color: #ffffff !important;
     width: 100%;
-    text-align: right;
+    text-align: left;
     bottom: 0px;
     right: 5px;
     margin-bottom: -18px;
@@ -749,11 +749,11 @@ label {
 }
 
 .dropdown-item {
-    text-align: right;
+    text-align: left;
 }
 
 .dropdown-item:last-child {
-    text-align: right;
+    text-align: left;
 }
 
 .dropdown-menu[x-placement^="bottom"],
@@ -792,7 +792,7 @@ label {
     width: 150px;
     font-size: 80%;
     color: #ffffff;
-    text-align: right;
+    text-align: left;
     position: absolute;
     right: 5px;
     bottom: -20px;
@@ -992,7 +992,7 @@ label {
     }
     .dropdown-toggle {
         width: 508px;
-        text-align: right;
+        text-align: left;
     }
     /* Step 3*/
     #step3 .col-sm {
@@ -1023,7 +1023,7 @@ label {
     }
     .dropdown-toggle {
         width: 490px;
-        text-align: right;
+        text-align: left;
     }
     #step3 .col-sm {
         max-width: 80%;
@@ -1063,7 +1063,7 @@ label {
 @media (max-width: 767px) {
     //prime
     ::ng-deep .p-inputMask input {
-        text-align: right;
+        text-align: left;
         margin: 0;
         min-width: 100%;
         padding: 10px 0 6px 12px;
@@ -1127,33 +1127,33 @@ label {
     }
     .dropdown-toggle {
         width: 340px;
-        text-align: right;
+        text-align: left;
     }
     /* Placeholder Dropdown */
     input::-webkit-input-placeholder {
         color: #fff !important;
          font-size: 2vw !important;
-        text-align: right;
+        text-align: left;
         padding-right: 0;
     }
     input:-moz-placeholder {
         /* Firefox 18- */
         color: #fff !important;
          font-size: 2vw !important;
-        text-align: right;
+        text-align: left;
         padding-right: 0;
     }
     input::-moz-placeholder {
         /* Firefox 19+ */
         color: #fff !important;
          font-size: 2vw !important;
-        text-align: right;
+        text-align: left;
         padding-right: 0;
     }
     input:-ms-input-placeholder {
         color: #fff !important;
          font-size: 2vw !important;
-        text-align: right;
+        text-align: left;
         padding-right: 0;
     }
     input[type=text],
@@ -1164,7 +1164,7 @@ label {
         font-weight: lighter;
         color: #fff;
         padding-right: 10px;
-        text-align: right;
+        text-align: left;
     }
     .input-group-text {
         font-size: 13px;
@@ -1263,7 +1263,7 @@ label {
     input[type=password]:focus,
     input[type=email],
     input[type=tel] {
-        background-color: #ed482d;
+        background-color: #1CA390;
         color: #fff;
     }
     /* Step3 */
@@ -1324,7 +1324,7 @@ label {
     }
     .dropdown-toggle {
         width: 450px;
-        text-align: right;
+        text-align: left;
     }
     input[type=text],
     input[type=password],
@@ -1340,7 +1340,7 @@ label {
     input[type=password]:focus,
     input[type=email],
     input[type=tel] {
-        background-color: #ed482d;
+        background-color: #1CA390;
         color: #fff;
     }
     /* Placeholder Dropdown */
@@ -1416,14 +1416,14 @@ label {
     #form-voluntario-global .justify-content-center {
         flex-direction: column-reverse;
         justify-content: center;
-        text-align: center;
+        text-align: left;
         .col-sm-4 {
             margin: 0 0 20px 0
         }
     }
     .dropdown-toggle {
         width: 340px;
-        text-align: right;
+        text-align: left;
     }
 }
 
@@ -1746,7 +1746,7 @@ label.input-terms-label {
     width: 100%;
     font-style: initial;
     option {
-        color: grey;    
+        color: grey;
         font-size: 16px;
         font-style: initial;
     }
@@ -1755,3 +1755,191 @@ label.input-terms-label {
 .form-email-warning{
     color:#37BC99 !important;
 }
+
+/*
+  Form Float
+*/
+
+@media(max-width: 2600px) {
+  .checkbox-ajust {
+    margin-left: -10px;
+  }
+}
+
+@media(min-width: 601px) {
+  .form-group {
+    background-color: #1CA390 !important;
+  }
+
+  .example-full-width {
+    width: 100% !important;
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+  }
+
+  .example-full-width input, input[type="text"]::placeholder {
+    color: #fff !important;
+  }
+
+  .placeholder {
+    font-size: 18px;
+    color: #fff;
+    padding-top: 3px;
+  }
+
+  .mat-form-field input {
+    border-bottom: none !important;
+  }
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example-container > * {
+    width: 100%;
+  }
+
+  .mat-card {
+    color: #fff;
+    padding: 0px 30px 0px 30px;
+    background-color: #1ca390 !important;
+    box-shadow: none !important;
+  }
+
+  .mat-card h2 {
+    font-size: 18px;
+    padding: 5px 5px 0px;
+    margin-bottom: 10px !important;
+  }
+
+  .mat-radio-outer-circle{
+    border-color: #fff !important;
+  }
+
+  .ajust-checkbox {
+    display: flex;
+  }
+
+  .ajust-inline {
+    display: inline;
+  }
+}
+
+@media(max-width: 600px) {
+  .form-group {
+    background-color: #1CA390 !important;
+  }
+
+  .example-full-width {
+    width: 100% !important;
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+  }
+
+  .example-full-width input, input[type="text"]::placeholder {
+    color: #fff !important;
+  }
+
+  .placeholder {
+    font-size: 18px;
+    color: #fff;
+    padding-top: 3px;
+  }
+
+  .mat-form-field input {
+    border-bottom: none !important;
+  }
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example-container > * {
+    width: 100%;
+  }
+
+  .mat-card {
+    color: #fff !important;
+    padding: 0px 30px 0px 30px;
+    background-color: #1CA390 !important;
+    box-shadow: none !important;
+  }
+
+  .mat-card h2 {
+    font-size: 18px;
+    padding: 5px 5px 0px;
+    margin-bottom: 10px !important;
+  }
+
+  .mat-radio-outer-circle{
+    border-color: #fff !important;
+  }
+
+  .ajust-checkbox {
+    display: flex;
+  }
+
+  .ajust-inline {
+    display: inline;
+  }
+}
+
+@media(max-width: 441px) {
+  .align-left-itens {
+    text-align: left !important;
+  }
+}
+
+@media(max-width: 276px) {
+  .align-left-itens {
+    text-align: left !important;
+  }
+}
+
+.backgroud-none {
+  background: none !important;
+}
+
+.buttons {
+  margin: -10px 0 20px;
+}
+
+.icon-ajust {
+  z-index: 1111;
+  position: absolute;
+  margin-top: 15px;
+  margin-top: 22px;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.icon-ajust-check {
+  z-index: 1111;
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.default-height {
+  height: none;
+}
+
+.height-inputs {
+  height: 48px !important;
+}
+
+.mat-option {
+  color: black !important
+}
+// .example-form {
+//   min-width: 150px;
+//   max-width: 500px;
+//   width: 100%;
+// }
+
+// .example-full-width {
+//   width: 100%;
+// }
