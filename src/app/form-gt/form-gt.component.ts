@@ -100,6 +100,8 @@ export class FormGtComponent implements OnInit {
   invalidPassword: boolean = false;
   invalidDate: boolean = false;
   invalidPhone: boolean = false;
+  invalidUniversity: boolean = false;
+  invalidCourse: boolean = false;
   matchDate: boolean = true;
   loading: boolean = false;
   step1Form: FormGroup;
@@ -230,6 +232,22 @@ export class FormGtComponent implements OnInit {
     });
   }
 
+  checkUniversity() {
+    if (this.user.university.id == '') {
+      this.invalidUniversity = true;
+    } else {
+      this.invalidUniversity = false;
+    }
+  }
+
+  checkCourse() {
+    if (this.user.university.id == '') {
+      this.invalidCourse = true;
+    } else {
+      this.invalidCourse = false;
+    }
+  }
+
   checkPersonaValue(){
     let url = this.router.url.replace('/',''),
         type = null;
@@ -275,10 +293,12 @@ export class FormGtComponent implements OnInit {
     }
   }
 
-  filterCities(department){
-    this.citiesOptions = this.domainsService.getCities(department);
-    this.filteredCitiesOptions = of(this.citiesOptions);
-    this.user.city = { name: '' };
+  getOptionText(option) {
+    return option.name;
+  }
+
+  filterCities(event){
+    this.citiesOptions = this.domainsService.getCities({name: event.value.name});
   }
 
   filterUniversities(city) {
