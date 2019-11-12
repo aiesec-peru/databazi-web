@@ -318,7 +318,7 @@ _:-o-prefocus,
     }
 }
 
-// TODO: ::ng-deep / /deep/ 
+// TODO: ::ng-deep / /deep/
 // Seems to be a form of selection that will be abolished in the future, an alternative form of editing of this component should be found without the use of these selectors.
 /*
     Links de referência:
@@ -335,7 +335,7 @@ _:-o-prefocus,
     border: 0 !important;
     position: relative;
     flex: 1 1 auto;
-    text-align: right;
+    text-align: left;
     margin: 0;
     min-width: 400px;
     padding: 10px 30px 6px 12px;
@@ -463,7 +463,7 @@ select:-webkit-autofill:focus {
 }
 
 #inputDatadeNascimento {
-    text-align: right;
+    text-align: left;
     padding: inherit 0 !important
 }
 
@@ -536,7 +536,7 @@ section.header h1 {
     background-color: rgba(255, 255, 255, .25);
     box-sizing: border-box;
     display: flex;
-    align-items: center; 
+    align-items: center;
     .row {
         display: flex;
         align-items: center;
@@ -619,7 +619,7 @@ section.header h1 {
 input::-webkit-input-placeholder {
     font-size: 13px;
     font-weight: lighter;
-    text-align: right;
+    text-align: left;
     padding-right: 30px;
     font-size: 13px !important;
     color: #fff;
@@ -629,7 +629,7 @@ input::-webkit-input-placeholder {
 input:-moz-placeholder {
     /* Firefox 18- */
     font-weight: lighter;
-    text-align: right;
+    text-align: left;
     padding-right: 30px;
     font-size: 13px !important;
     color: #fff;
@@ -640,7 +640,7 @@ input::-moz-placeholder {
     /* Firefox 19+ */
     font-size: 16px;
     font-weight: lighter;
-    text-align: right;
+    text-align: left;
     padding-right: 30px;
     font-size: 13px !important;
     color: #fff;
@@ -650,7 +650,7 @@ input::-moz-placeholder {
 input:-ms-input-placeholder {
     font-size: 16px;
     font-weight: lighter;
-    text-align: right;
+    text-align: left;
     padding-right: 30px;
     font-size: 13px !important;
     color: #fff;
@@ -664,7 +664,7 @@ input[type=tel] {
     font-size: 16px;
     font-weight: lighter;
     padding-right: 30px;
-    text-align: right;
+    text-align: left;
 }
 
 input[type=text]:focus,
@@ -695,7 +695,7 @@ input[type=tel] {
 .text-muted {
     color: #ffffff !important;
     width: 100%;
-    text-align: right;
+    text-align: left;
     bottom: 0px;
     right: 5px;
     margin-bottom: -18px;
@@ -755,11 +755,11 @@ label {
 }
 
 .dropdown-item {
-    text-align: right;
+    text-align: left;
 }
 
 .dropdown-item:last-child {
-    text-align: right;
+    text-align: left;
 }
 
 .dropdown-menu[x-placement^="bottom"],
@@ -1070,9 +1070,9 @@ label {
   --------------------------------------------------------------*/
 
 @media (max-width: 767px) {
-    //prime 
+    //prime
     ::ng-deep .p-inputMask input {
-        text-align: right;
+        text-align: left;
         margin: 0;
         min-width: 100%;
         padding: 10px 0 6px 12px;
@@ -1173,7 +1173,7 @@ label {
         font-weight: lighter;
         color: #fff;
         padding-right: 10px;
-        text-align: right;
+        text-align: left;
     }
     .input-group-text {
         font-size: 14px;
@@ -1198,7 +1198,7 @@ label {
 @media (max-width: 600px) {
     #inputDatadeNascimento {
         text-align: left;
-    } //prime 
+    } //prime
     p-autoComplete {
         font-size: 3.2vw !important
     }
@@ -1881,7 +1881,7 @@ label {
         left: 0;
         top: 0;
         z-index: 2;
-    }    
+    }
     .close-modal-button {
         width: 30px;
         height: 30px;
@@ -1909,7 +1909,7 @@ label.input-terms-label {
     width: 100%;
     font-style: initial;
     option {
-        color: grey;    
+        color: grey;
         font-size: 16px;
         font-style: initial;
     }
@@ -1917,4 +1917,183 @@ label.input-terms-label {
 
 .form-email-warning{
     color:#0a8ea0 !important;
+}
+
+/*
+Input Flutuante
+*/
+
+@media(max-width: 2600px) {
+  .checkbox-ajust {
+    margin-left: -10px;
+  }
+}
+
+@media(min-width: 601px) {
+  .form-group {
+    background-color: #0a8191 !important;
+  }
+
+  .example-full-width {
+    width: 100% !important;
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+  }
+
+  .example-full-width input, input[type="text"]::placeholder {
+    color: #fff !important;
+  }
+
+  .placeholder {
+    font-size: 18px;
+    color: #fff;
+    padding-top: 3px;
+  }
+
+  .mat-form-field input {
+    border-bottom: none !important;
+  }
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example-container > * {
+    width: 100%;
+  }
+
+  .mat-card {
+    color: #fff;
+    padding: 0px 30px 0px 30px;
+    background-color: #0a8191 !important;
+    box-shadow: none !important;
+  }
+
+  .mat-card h2 {
+    font-size: 18px;
+    padding: 5px 5px 0px;
+    margin-bottom: 10px !important;
+  }
+
+  .mat-radio-outer-circle{
+    border-color: #fff !important;
+  }
+
+  .ajust-checkbox {
+    display: flex;
+  }
+
+  .ajust-inline {
+    display: inline;
+  }
+}
+
+@media(max-width: 600px) {
+  .form-group {
+    background-color: #0a8191 !important;
+  }
+
+  .example-full-width {
+    width: 100% !important;
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+  }
+
+  .example-full-width input, input[type="text"]::placeholder {
+    color: #fff !important;
+  }
+
+  .placeholder {
+    font-size: 18px;
+    color: #fff;
+    padding-top: 3px;
+  }
+
+  .mat-form-field input {
+    border-bottom: none !important;
+  }
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example-container > * {
+    width: 100%;
+  }
+
+  .mat-card {
+    color: #fff !important;
+    padding: 0px 30px 0px 30px;
+    background-color: #0a8191 !important;
+    box-shadow: none !important;
+  }
+
+  .mat-card h2 {
+    font-size: 18px;
+    padding: 5px 5px 0px;
+    margin-bottom: 10px !important;
+  }
+
+  .mat-radio-outer-circle{
+    border-color: #fff !important;
+  }
+
+  .ajust-checkbox {
+    display: flex;
+  }
+
+  .ajust-inline {
+    display: inline;
+  }
+}
+
+@media(max-width: 441px) {
+  .align-left-itens {
+    text-align: left !important;
+  }
+}
+
+@media(max-width: 276px) {
+  .align-left-itens {
+    text-align: left !important;
+  }
+}
+
+.bacekgroud-none {
+  background-color: #0a8ea0 !important;
+}
+
+.buttons {
+  margin: -10px 0 20px;
+}
+
+.icon-ajust {
+  z-index: 1111;
+  position: absolute;
+  margin-top: 15px;
+  margin-top: 22px;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.icon-ajust-check {
+  z-index: 1111;
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.default-height {
+  height: none;
+}
+
+.height-inputs {
+  height: 48px !important;
+}
+
+.mat-option {
+  color: black !important
 }
