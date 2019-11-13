@@ -84,3 +84,66 @@ $custom-theme: create-wonky-theme($custom-theme-primary, $custom-theme-accent, $
 
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+.forms {
+  .mat-form-field-infix {
+    padding: 10px 0;
+  }
+  .form-with-radio {
+    .col-3 {
+      padding: 10px 0;
+    }
+    .col-sm {
+      padding: 10px;
+    }
+    @media screen and (max-width: 990px){
+      i {
+        left: 0;
+      }
+      h2 {
+        text-align: left;
+      }
+      .row {
+        flex-direction: column;
+        .col-3 {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .height-inputs {
+    height: auto;
+    &:first-child {
+      padding-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 990px){
+  h1 {
+    margin-top: 0 !important;
+  }
+  #header-product .container .product-info .button.button {
+    bottom: 0;
+    right: 0;
+  }
+}
+.mat-form-field-label {
+  color: white !important;
+}
+.mat-form-field-underline {
+  background-color: rgba(255,255,255,.35) !important;;
+}
+.mat-form-field-ripple {
+  background-color: transparent !important;
+}
+
+
+.thank-you-message {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  h3 {
+    font-size: 2rem !important;
+  }
+}
