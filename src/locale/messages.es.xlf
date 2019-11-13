@@ -1750,7 +1750,7 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
       <target>Términos y Condiciones</target></trans-unit>
 
       <trans-unit id="termsAndConditionsConfirmation" datatype="html">
-        <source>Li e aceito os termos e condições.</source>
+        <source>termos e condições.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">149</context>
@@ -1763,7 +1763,7 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
           <context context-type="linenumber">151</context>
         </context-group>
-      <target>He leído y aceptado los Términos y Condiciones de Registro.</target></trans-unit>
+      <target>Términos y Condiciones de Registro.</target></trans-unit>
 
       <trans-unit id="termsAndConditionsText" datatype="html">
         <source>

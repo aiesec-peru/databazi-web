@@ -431,6 +431,10 @@ export class FormGeComponent implements OnInit {
     }
   }
 
+  checkFirstStepDataIsInvalid(){
+    return ((!this.user.fullname) || (!this.user.cellphone) || (!this.user.email) || (!this.user.birthdate) || (!this.matchDate) || (this.invalidEmail) || (!this.user.accepted_terms) || this.step1Form.invalid || this.invalidDate);
+  }
+
   registerUser(el: HTMLElement) {
     this.submittedPersonal = true;
     if (this.user.fullname && this.user.cellphone && this.user.email && this.user.birthdate && !this.invalidPhone && this.matchDate) {

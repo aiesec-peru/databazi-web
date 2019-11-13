@@ -100,7 +100,7 @@
                 <div class="form-group height-inputs example-form">
                   <i class="fas icon-ajust fa-gift"></i>
                   <mat-form-field class="example-full-width">
-                    <input matInput id="inputDatadeNascimento" formControlName="birthdate" (blur)="checkDate()"
+                    <input matInput id="inputDatadeNascimento" formControlName="birthdate" (keyup)="checkDate()" (blur)="checkDate()"
                       [(ngModel)]="user.birthdate" name="birthdate" mask="00/00/0000">
                     <mat-placeholder i18n="@@birthdate" class="placeholder">Data de Nascimento</mat-placeholder>
                   </mat-form-field>
@@ -121,12 +121,14 @@
                 </div>
 
                 <!-- Termos -->
-                <div class="form-group form-check text-center checkbox background-none">
+                <div class="form-check text-center checkbox background-none">
                   <input type="checkbox" class="form-check-input" [checked]="user.accepted_terms" id="aceitoTermos"
                     [(ngModel)]="user.accepted_terms" formControlName="accepted_terms" name="accepted_terms">
-                  <label class="form-check-label" for="aceitoTermos"><a
+                  <label class="form-check-label" for="aceitoTermos">
+                      He leído y aceptado los
+                      <a
                       href="assets/terms/Terminos y Condiciones - AIESEC en Perú.pdf" target="_blank"
-                      i18n="@@termsAndConditionsConfirmation">Li e aceito os termos e condições.</a></label>
+                      i18n="@@termsAndConditionsConfirmation">Términos y Condiciones de Registro.</a></label>
                 </div>
 
               </form>
@@ -235,8 +237,7 @@
                   Completa tu contraseña.
                   <br>
                   <span>
-                    Tu contraseña debe contener al menos 8 caractéres, de los cuales uno debe ser un caracter en
-                    mayúscula, otro en minúscula, y un número.
+                      Tu contraseña debe contener al menos 8, una letra mayúscula, una minuscola e uno numero.
                   </span>
                 </div>
 
@@ -285,19 +286,22 @@
                   Por favor, selecione um valor
                 </div>
 
-                <div class="form-group align-left-itens experiences-input">
-                  <i class="fas icon-ajust-check fa-book-open"></i>
-                  <mat-card>
-                    <h2>Experiencia laboral ?</h2>
-                    <mat-card-content class="checkbox-ajust">
-                      <mat-radio-group [(ngModel)]="user.work_experience" formControlName="work_experience"
-                        *ngFor="let workExperience of workExperienceOptions">
-                        <mat-radio-button class="ajust-inline col-sm" type="radio" value="{{workExperience.id}}">
-                          {{workExperience.name}}</mat-radio-button>
-                      </mat-radio-group>
-                    </mat-card-content>
-                  </mat-card>
-                </div>
+                <div class="form-group experiences-input form-with-radio">
+                    <i class="fas icon-ajust-check fa-book-open"></i>
+                    <mat-card>
+                      <h2>Experiencia laboral?</h2>
+                      <mat-card-content class="checkbox-ajust">
+                        <mat-radio-group [(ngModel)]="user.work_experience" formControlName="work_experience">
+                          <div class='row'>
+                            <div class='col-3' *ngFor="let workExperience of workExperienceOptions">
+                              <mat-radio-button class="ajust-inline col-sm" type="radio" value="{{workExperience.id}}">
+                                {{workExperience.name}}</mat-radio-button>
+                            </div>
+                          </div>
+                        </mat-radio-group>
+                      </mat-card-content>
+                    </mat-card>
+                  </div>
               </form>
             </div>
 
@@ -342,7 +346,7 @@
               </div>
               <div class="col text-right">
                 <button type="button" (click)="registerUser(headerGTRef)" class="btn btn-primary" *ngIf="personalData"
-                  [disabled]='step1Form.invalid || (!matchDate || invalidEmail) || !user.accepted_terms'
+                  [disabled]='checkFirstStepDataIsInvalid()'
                   i18n="@@next">Próximo</button>
                 <button type="button" (click)="submit(headerGTRef)" class="btn btn-primary submit-form"
                   *ngIf="studyData" [disabled]='unableToSubmit()' i18n="@@send">

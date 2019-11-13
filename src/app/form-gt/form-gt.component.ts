@@ -446,6 +446,10 @@ export class FormGtComponent implements OnInit {
       el.scrollIntoView();
     }
   }
+  
+  checkFirstStepDataIsInvalid(){
+    return ((!this.user.fullname) || (!this.user.cellphone) || (!this.user.email) || (!this.user.birthdate) || (!this.matchDate) || (this.invalidEmail) || (!this.user.accepted_terms) || this.step1Form.invalid || this.invalidDate);
+  }
 
   submit(el: HTMLElement) {
     if(this.user.scholarity.id && +this.user.scholarity.id <= 1){
