@@ -18,6 +18,10 @@ ngOnInit() {
     this.changeTextContent();
   }
 
+  scrollToForm(){
+    $("input[name='fullname']").trigger('click'); //o efeito do scroll não estava funcionando bem, vamos deixar isso aqui por enquanto.
+  }
+
   changeTextContent(){
       console.log('test');
     let url = this.router.url.replace('/',''),
