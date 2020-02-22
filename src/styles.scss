@@ -125,7 +125,8 @@ body { margin: 0; font-family: 'Roboto', sans-serif; }
   }
   #header-product .container .product-info .button.button {
     bottom: 0;
-    right: 0;
+    left: 0;
+    margin: 46px 0 !important;
   }
 }
 .mat-form-field-label {

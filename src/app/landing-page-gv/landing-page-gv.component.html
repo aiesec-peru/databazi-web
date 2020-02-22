@@ -115,8 +115,8 @@
           </div>
           <div class="row">
             <div class="col-sm-12">
-              <button [ngx-scroll-to]="'#form'" class="with-background bold gv without-border centered" i18n="@@subscribeNow" style="border-radius:5px;">
-                Quiero ser Voluntario Global
+              <button class="with-background bold gv without-border centered" i18n="@@subscribeNow" style="border-radius:5px;" (click)='scrollToForm()'>
+                Inscríbete
               </button>
             </div>
           </div>
@@ -196,7 +196,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <button [ngx-scroll-to]="'#form'" class="border-radius centered without-border with-background gv" i18n="@@talkWithOurRepresentatives" i18n="@@talkWithOurRepresentatives" style="background:#F22F03;font-weight: bold;">
+          <button class="border-radius centered without-border with-background gv" i18n="@@talkWithOurRepresentatives" i18n="@@talkWithOurRepresentatives" style="background:#F22F03;font-weight: bold;" (click)='scrollToForm()'>
             Habla con uno de nuestros representantes
            </button>
         </div>
