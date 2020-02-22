@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-landing-page-gv',
@@ -16,6 +17,10 @@ export class LandingPageGvComponent implements OnInit {
 
   ngOnInit() {
     this.changeTextContent();   
+  }
+
+  scrollToForm(){
+    $("input[name='fullname']").trigger('click'); //o efeito do scroll não estava funcionando bem, vamos deixar isso aqui por enquanto.
   }
 
   changeTextContent(){
