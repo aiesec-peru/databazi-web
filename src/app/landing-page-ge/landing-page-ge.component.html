@@ -149,8 +149,8 @@
           </div>
           <div class="row">
             <div class="col-sm-12">
-              <button [ngx-scroll-to]="'#form'" class="with-background bold ge without-border centered" i18n="@@subscribeNow" style="border-radius:5px;">
-                Quiero ser Emprendedor Global
+              <button [ngx-scroll-to]="'#form'" class="with-background bold ge without-border centered" i18n="@@subscribeNow" style="border-radius:5px;" (click)='scrollToForm()'>
+                Inscríbete
               </button>
             </div>
           </div>
@@ -228,7 +228,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <button [ngx-scroll-to]="'#form'" class="border-radius centered without-border" i18n="@@talkWithOurRepresentatives" style="background:#00AA90;color:white;font-weight:bold;">
+          <button class="border-radius centered without-border" i18n="@@talkWithOurRepresentatives" style="background:#00AA90;color:white;font-weight:bold;" (click)='scrollToForm()'>
             Habla con uno de nuestros representantes
           </button>
         </div>
