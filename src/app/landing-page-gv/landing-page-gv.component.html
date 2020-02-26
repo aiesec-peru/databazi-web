@@ -8,22 +8,44 @@
   <section class="product-description margin-top-and-bottom">
     <div class="container">
       <div class="row">
-        <div class="logo-product gv col-lg-5 col-sm-12 col-md-12"></div>
-        <div class="description col-lg-7 col-sm-12 col-md-12">
-          <h2 class="bold" i18n="@@programOverview">
-            ¿Qué significa ser un Voluntario Global?
-          </h2>
-          <p *ngIf="!gvTextContent" i18n="@@gvOverview">
-            Ser un Voluntario Global es una experiencia intercultural para jóvenes que desean obtener
-            un desarrollo personal y dejar un impacto positivo en el mundo. Con esta experiencia voluntaria 
-            realizarás proyectos sociales en ONGs, Escuelas o Fundaciones en diversos países del mundo, todos 
-            los proyectos están vinculados con los Objetivos de Desarrollo Sostenible propuestas por la ONU. 
-            Los proyectos tienen una duración de 6 a 8 semanas y el único requisito es tener entre 18 y 30 años
-            para dejar tu huella en el mundo.
-          </p>
-          <p *ngIf="gvTextContent" i18n="@@gvOverview">
+        <div class="product-overview-left col-lg-8 col-sm-12 col-md-12">
+          <div class="logo-product gv col-12"></div>
+          <div class="description col-12">
+            <h2 class="bold" i18n="@@programOverview">
+              Visión general del programa
+            </h2>
+            <p *ngIf="!gvTextContent" i18n="@@gvOverview">
+              Ser  un  Voluntario  Global  es  una  experiencia  intercultural  para  jóvenes que  desean  obtener  un  desarrollo  personal  y  dejar  un  impacto  positivo en  el  mundo.  Con  esta  experiencia  voluntaria  realizarás  proyectos sociales en ONGs, Escuelas o Fundaciones en diversos países del mundo, todos  los  proyectos  están  vinculados  con  los  Objetivos  de  Desarrollo Sostenible propuestas por la ONU. Los proyectos tienen una duración de 6 a 8 semanas y el único requisito es tener entre 18 y 30 años para dejar tu huella en el mundo
+            </p>
+            <p *ngIf="gvTextContent" i18n="@@gvOverview">
               {{ gvTextContent }}
-          </p>
+            </p>
+          </div>
+        </div>
+        <div class="product-overview-right col-lg-4 col-sm-12 col-md-12">
+          <h2 class="bold">
+            Beneficios del programa
+          </h2>
+          <ul>
+            <li>Networking Internacional</li>
+            <li>Seminarios de Liderazgo</li>
+            <li>Experiencia multicultural</li>
+            <li>Certificado Internacional</li>
+            <li>Hospedaje durante el tiempo de intercambio</li>
+          </ul>
+          <h2 class="bold">
+            Requisitos del programa
+          </h2>
+          <ul>
+            <li>Pagar la tasa de intercambio: <strong>S/1500</strong></li>
+            <li>Disponibilidad de viaje mínima de 3 meses</li>
+            <li>Estar en 10mo ciclo a más</li>
+            <li>Estudiar carreras afines a: Marketing, Administración, Tecnología y Desarrollo de Negocios</li>
+            <li>Experiencia en el campo</li>
+            <li>Inglés Intermedio / Avanzado</li>
+            <li>Adquirir tu seguro internacional</li>
+            <li>Tolerancia cultural</li>
+          </ul>
         </div>
       </div>
     </div>

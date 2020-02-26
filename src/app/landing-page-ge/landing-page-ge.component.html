@@ -8,21 +8,43 @@
 <section class="product-description margin-top-and-bottom">
   <div class="container">
     <div class="row">
-      <div class="logo-product ge col-lg-5 col-sm-12 col-md-12"></div>
-      <div class="description col-lg-7 col-sm-12 col-md-12">
-        <h2 class="bold" i18n="@@programOverview">
-          ¿Qué significa ser un Emprendedor Global?
-        </h2>
-        <p *ngIf="!geTextContent">
-          Ser Emprendedor Global es una experiencia de pasantía internacional donde jóvenes (estudiantes o graduados) podrán desarrollar
-          su carrera profesional trabajando en una Startup durante 8 a 12 semanas. Las áreas de acción son Marketing, Administración,
-          Tecnología e Información, Diseño Gráfico y Desarrollo de Negocios. Es de preferencia que el joven tenga inglés
-          intermedio y alguna experiencia profesional previa o académica en el área de ocupación de preferencia
-        </p>
-        <p *ngIf="geTextContent">
-          {{ geTextContent }}
-        </p>
+      <div class="product-overview-left col-lg-8 col-sm-12 col-md-12">
+        <div class="logo-product ge col-12"></div>
+        <div class="description col-12">
+          <h2 class="bold" i18n="@@programOverview">
+            Visión general del programa
+          </h2>
+          <p *ngIf="!geTextContent">
+            Ser  Emprendedor  Global  es  una  experiencia  de  pasantía  internacional donde  jóvenes  (estudiantes  o  graduados)  podrán  desarrollar  su  carrera profesional  trabajando  en  una  Startup  durante  8  a  12  semanas.  Las áreas    de    acción    son    Marketing,    Administración,    Tecnología    e Información, Diseño Gráfico y Desarrollo de Negocios. Es de preferencia que  el  joven  tenga  inglés  intermedio  y  alguna  experiencia  profesional previa o académica en el área de ocupación de preferencia
+          </p>
+          <p *ngIf="geTextContent">
+            {{ geTextContent }}
+          </p>
+        </div>
       </div>
+      <div class="product-overview-right col-lg-4 col-sm-12 col-md-12">
+          <h2 class="bold">
+            Beneficios del programa
+          </h2>
+          <ul>
+            <li>Adquirir experiencia pre profesional</li>
+            <li>Networking Internacional</li>
+            <li>Seminarios de Liderazgo</li>
+            <li>Experiencia multicultural</li>
+            <li>Certificado Internacional</li>
+            <li>Hospedaje durante el tiempo de intercambio</li>
+          </ul>
+          <h2 class="bold">
+            Requisitos del programa
+          </h2>
+          <ul>
+            <li>Pagar la tasa de intercambio: <strong>S/1300</strong></li>
+            <li>Disponibilidad de viaje mínima de 6 semanas</li>
+            <li>Adquirir tu seguro internacional</li>
+            <li>Tolerancia cultural</li>
+            <li>Estudiar carreras afines a: Marketing, Administración, Tecnología, Diseño gráfico y Desarrollo de Negocios</li>
+          </ul>
+        </div>
     </div>
   </div>
 </section>

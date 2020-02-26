@@ -8,23 +8,41 @@
   <section class="product-description margin-top-and-bottom">
     <div class="container">
       <div class="row">
-        <div class="logo-product gt col-lg-5 col-sm-12 col-md-12"></div>
-        <div class="description col-lg-7 col-sm-12 col-md-12">
-          <h2 class="bold" i18n="@@programOverview">
-            ¿Qué significa ser un Talento Global?
+        <div class="product-overview-left col-lg-8 col-sm-12 col-md-12">
+          <div class="logo-product gt col-12"></div>
+          <div class="description col-12">
+            <h2 class="bold" i18n="@@programOverview">
+              Visión general del programa
+            </h2>
+            <p *ngIf="!gtTextContent">
+              Ser  un  Talento  global  es  una  experiencia  internacional  en  empresas durante 3 a 12 meses donde los jóvenes tienen la oportunidad de vivir el ambiente  profesional  y  corporativo.  Las  grandes  áreas  de  trabajo  de Talento  Global  son:  Tecnología  e  Información,  Administración,  Finanzas, Gestión, Recursos Humanos, Marketing y Enseñanza de idiomas. Para el proceso  son  necesarios  algunos  requisitos  como  inglés  avanzado  y experiencia   en   el   área   en   la   que   te   interesa   trabajar.   En   esta experiencia,  el  intercambista  recibe  un  soporte  económico  para  cubrir los costos básicos durante el período de intercambio.
+            </p>
+            <p *ngIf="gtTextContent">
+              {{ gtTextContent }}
+            </p>
+          </div>
+        </div>
+        <div class="product-overview-right col-lg-4 col-sm-12 col-md-12">
+          <h2 class="bold">
+            Beneficios del programa
           </h2>
-          <p *ngIf="!gtTextContent">
-            Ser un Talento global es una experiencia internacional en empresas durante 3 a 12 meses donde 
-            los jóvenes tienen la oportunidad de vivir el ambiente profesional y corporativo. Las grandes 
-            áreas de trabajo de Talento Global son: Tecnología e Información, Administración, Finanzas, 
-            Gestión, Recursos Humanos, Marketing y Enseñanza de idiomas. Para el proceso son necesarios 
-            algunos requisitos como inglés avanzado y experiencia en el área en la que te interesa trabajar. 
-            En esta experiencia, el intercambista recibe un soporte económico para cubrir los costos básicos 
-            durante el período de intercambio.
-          </p>
-          <p *ngIf="gtTextContent">
-            {{ gtTextContent }}
-          </p>
+          <ul>
+            <li>Adquirir experiencia profesional</li>
+            <li>Remuneración mensual</li>
+            <li>Networking Internacional</li>
+            <li>Seminarios de Liderazgo</li>
+            <li>Experiencia multicultural</li>
+            <li>Certificado Internacional</li>
+          </ul>
+          <h2 class="bold">
+            Requisitos del programa
+          </h2>
+          <ul>
+            <li>Pagar la tasa de intercambio: <strong>S/1190</strong></li>
+            <li>Disponibilidad de viaje de 6 semanas</li>
+            <li>Adquirir tu seguro internacional</li>
+            <li>Tolerancia cultural</li>
+          </ul>
         </div>
       </div>
     </div>
