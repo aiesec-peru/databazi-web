@@ -20,7 +20,7 @@
         }
     }
     .logo-product {
-        background-size: 80%;
+        background-size: 60%;
         background-position: center center;
         background-repeat: no-repeat;
         min-height: 200px;
@@ -374,12 +374,6 @@
             padding: 10px;
             text-align: center;
         }
-    }
-}
-
-@media (min-width: 1280px) and (max-width: 1439px) {
-    section.product-description {
-        height: calc(40vh - 75px);
     }
 }
 
