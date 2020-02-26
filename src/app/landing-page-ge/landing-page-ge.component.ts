@@ -20,15 +20,20 @@ ngOnInit() {
   }
 
   scrollToForm(){
-    var scrollTop = 0;
+    var scrollTop = 2000;
     if (window.innerWidth >= 1024){
-      scrollTop = 1300;
+      scrollTop = 1200;
     }else{
-      scrollTop = -scrollTop;
-      scrollTop -= 200;
+      scrollTop -= 300;
     }
     $('html, body').animate({
       scrollTop: scrollTop
+    }, 700);
+  }
+  
+  scrollToTop() {
+    $('html, body').animate({
+      scrollTop: 0
     }, 700);
   }
 
