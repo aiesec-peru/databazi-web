@@ -20,7 +20,16 @@ ngOnInit() {
   }
 
   scrollToForm(){
-    $("input[name='fullname']").trigger('click'); //o efeito do scroll não estava funcionando bem, vamos deixar isso aqui por enquanto.
+    var scrollTop = 0;
+    if (window.innerWidth >= 1024){
+      scrollTop = 1300;
+    }else{
+      scrollTop = -scrollTop;
+      scrollTop -= 200;
+    }
+    $('html, body').animate({
+      scrollTop: scrollTop
+    }, 700);
   }
 
   changeTextContent(){
