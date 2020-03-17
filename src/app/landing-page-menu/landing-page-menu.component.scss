@@ -106,7 +106,7 @@ ul#menu {
         button.button {
             position: absolute;
             right: 25px;
-            margin-top: 100px;
+            // margin-top: 100px;
         }
     }
 }
@@ -381,15 +381,25 @@ ul#menu {
         text-align: left;
         h1 {
             margin-top: 60px;
+            margin-bottom: 0;
             background:#037ef3;
             color:white;
             font-weight: bold;
             font-family: 'Lato', sans-serif;
+            display: inline-block;
+            & + br + h1 {
+                margin-top: -1px;
+            }
         }
         h2{
             color:white;
             font-family: 'Lato', sans-serif; 
             font-style:italic;
+        }
+        &.gt {
+            h1 {
+                margin-top: 120px;
+            }
         }
     }
 }
