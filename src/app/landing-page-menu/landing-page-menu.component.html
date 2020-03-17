@@ -123,111 +123,198 @@
       </div>
     </div>
     <div class="product-info" *ngIf="actualPage == 'talento-global'">
-        <h1 style="background:#0a8ea0;font-size: 1.5em;margin-top: 150px;">¿Buscas la proxima oportunidad para darle un giro a</h1>
-        <h1 style="background:#0a8ea0;margin-top: -10px;font-size: 1.5em;">tu vida y obtener experiencia profesional?</h1>
-        <h2>Diferenciate a través de una pasantía profesional en el extranjero.</h2>
-      <button class='button with-background bold gt without-border border-radius margin' (click)='scrollToForm()'> Inscríbete </button>
+      <div class='desktop'>
+          <h1 style="background:#0a8ea0;font-size: 1.5em;margin-top: 150px;">¿Buscas la proxima oportunidad para darle un giro a</h1>
+          <h1 style="background:#0a8ea0;margin-top: -10px;font-size: 1.5em;">tu vida y obtener experiencia profesional?</h1>
+          <h2>Diferenciate a través de una pasantía profesional en el extranjero.</h2>
+        <button class='button with-background bold gt without-border border-radius margin' (click)='scrollToForm()'> Inscríbete </button>
+      </div>
+      <div class="mobile">
+        <h1>
+            ¿Estás listo para iniciar tu experiencia profesional en el extranjero?
+        </h1>
+      </div>
     </div>
     <div class="product-info" *ngIf="actualPage == 'emprendedor-global'">
-        <h1 style="background:#30c39e;font-size: 1.5em;">¿Te entusiasma un entorno de trabajo dinámico y acelerado?</h1>
-        <h1 style="background:#30c39e;margin-top: -10px;font-size: 1.5em;">¿Quieres obtener tu primer experiencia laboral?</h1>
-        <h2>¡Comienza tu viaje empresarial con una pasantía internacional en una startup!</h2>
-      <button class='button with-background bold ge without-border border-radius margin' (click)='scrollToForm()'> Inscríbete </button>
+      <div class='desktop'>
+          <h1 style="background:#30c39e;font-size: 1.5em;">¿Te entusiasma un entorno de trabajo dinámico y acelerado?</h1>
+          <h1 style="background:#30c39e;margin-top: -10px;font-size: 1.5em;">¿Quieres obtener tu primer experiencia laboral?</h1>
+          <h2>¡Comienza tu viaje empresarial con una pasantía internacional en una startup!</h2>
+        <button class='button with-background bold ge without-border border-radius margin' (click)='scrollToForm()'> Inscríbete </button>
+      </div>
+      <div class='mobile'>
+         <h1>
+            Realiza tus pasantías pre profesionales en una Start Up Internacional
+          </h1>
+      </div>
     </div>
     <div class="product-info" *ngIf="actualPage == 'voluntario-global'">
-        <h1 style="background:#f85a40;font-size: 1.5em;">¿Te atreves a impactar positivamente el mundo?</h1>
-        <h2>¡Bueno, creemos que puedes hacerlo a través de un Voluntariado<br>
-        internacional hacia los Objetivos de Desarrollo Sostenible<br>
-        propuestos por la ONU!</h2>
-      <button class='button with-background bold gv without-border border-radius margin' (click)='scrollToForm()'> Inscríbete </button>
+      <div class='desktop'>
+          <h1 style="background:#f85a40;font-size: 1.5em;">¿Te atreves a impactar positivamente el mundo?</h1>
+          <h2>¡Bueno, creemos que puedes hacerlo a través de un Voluntariado<br>
+          internacional hacia los Objetivos de Desarrollo Sostenible<br> 
+          propuestos por la ONU!</h2>
+        <button class='button with-background bold gv without-border border-radius margin' (click)='scrollToForm()'> Inscríbete </button>
+      </div>  
+      <div class='mobile'>
+          <h1>
+              ¿Te atreves a realizar un proyecto social en el extranjero?
+          </h1>
+      </div>  
     </div>
 
    <!-- Aca empiezan los textos de los buyer persona de GV -->
     
     <div class="product-info" *ngIf="actualPage == 'voluntario-para-crecer'">
-      <h1 style="background:#f85a40;font-size: 1.5em;">¿Quieres vivir una experiencia de impacto que te
-        permita crecer profesionalmente?</h1>
-      <h2>Siendo parte de un voluntariado internacional tendrás la
-        oportunidad de adquirir nuevos conocimientos y vivir
-        nuevas experiencias que mejoraran tus habilidades
-        interpersonales.</h2>
-    <button class='button with-background bold gv without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+      <div class='desktop'>
+          <h1 style="background:#f85a40;font-size: 1.5em;">¿Quieres vivir una experiencia de impacto que te
+              permita crecer profesionalmente?</h1>
+            <h2>Siendo parte de un voluntariado internacional tendrás la
+              oportunidad de adquirir nuevos conocimientos y vivir
+              nuevas experiencias que mejoraran tus habilidades
+              interpersonales.</h2>
+          <button class='button with-background bold gv without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+      </div>
+      <div class='mobile'>
+          <h1>
+              ¿Te atreves a realizar un proyecto social en el extranjero?
+          </h1>
+      </div> 
    </div>
 
     <div class="product-info" *ngIf="actualPage == 'voluntario-para-explorar'">
-      <h1 style="background:#f85a40;font-size: 1.5em;">¿Te atreves a salir de tu zona de confort explorando
-        otras culturas?</h1>
-      <h2>Siendo parte de un voluntariado internacional podrás vivir
-        la experiencia de conocer y aventurarte a nuevas culturas
-        que te permitirán salir de tu zona de confort.</h2>
-    <button class='button with-background bold gv without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+      <div class='desktop'>
+          <h1 style="background:#f85a40;font-size: 1.5em;">¿Te atreves a salir de tu zona de confort explorando
+              otras culturas?</h1>
+            <h2>Siendo parte de un voluntariado internacional podrás vivir
+              la experiencia de conocer y aventurarte a nuevas culturas
+              que te permitirán salir de tu zona de confort.</h2>
+          <button class='button with-background bold gv without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+      </div>
+    <div class='mobile'>
+        <h1>
+            ¿Te atreves a realizar un proyecto social en el extranjero?
+        </h1>
+    </div> 
     </div>
 
     <div class="product-info" *ngIf="actualPage == 'voluntario-para-impactar'">
-      <h1 style="background:#f85a40;font-size: 1.5em;">¿Te atreves a impactar positivamente el mundo?</h1>
-      <h2>¡Bueno, creemos que puedes hacerlo a través de un Voluntariado<br>
-      internacional hacia los Objetivos de Desarrollo Sostenible<br>
-      propuestos por la ONU!</h2>
-    <button class='button with-background bold gv without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+      <div class='desktop'>
+          <h1 style="background:#f85a40;font-size: 1.5em;">¿Te atreves a impactar positivamente el mundo?</h1>
+          <h2>¡Bueno, creemos que puedes hacerlo a través de un Voluntariado<br>
+          internacional hacia los Objetivos de Desarrollo Sostenible<br>
+          propuestos por la ONU!</h2>
+        <button class='button with-background bold gv without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+      </div>
+
+    <div class='mobile'>
+        <h1>
+            ¿Te atreves a realizar un proyecto social en el extranjero?
+        </h1>
+    </div> 
     </div>
 
     <!-- Aca empiezan los textos de los buyer persona de GE -->
     
     <div class="product-info" *ngIf="actualPage == 'emprendedor-para-crecer'">
-      <h1 style="background:#30c39e;font-size: 1.5em;">¿Te entusiasma un entorno de trabajo dinámico y
-        acelerado?</h1>
-      <h1 style="background:#30c39e;font-size: 1.5em;margin-top: -10px;">¿Quieres obtener una
-        experiencia laboral internacional?</h1>
-      <h2>¡Comienza tu viaje empresarial con una pasantía
-        internacional en una startup!</h2>
-    <button class='button with-background bold ge without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+      <div class='desktop'>
+          <h1 style="background:#30c39e;font-size: 1.5em;">¿Te entusiasma un entorno de trabajo dinámico y
+              acelerado?</h1>
+            <h1 style="background:#30c39e;font-size: 1.5em;margin-top: -10px;">¿Quieres obtener una
+              experiencia laboral internacional?</h1>
+            <h2>¡Comienza tu viaje empresarial con una pasantía
+              internacional en una startup!</h2>
+          <button class='button with-background bold ge without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+      </div>
+      <div class='mobile'>
+          <h1>
+             Realiza tus pasantías pre profesionales en una Start Up Internacional
+           </h1>
+       </div>
    </div>
 
    <div class="product-info" *ngIf="actualPage == 'emprendedor-para-explorar'">
-      <h1 style="background:#30c39e;;font-size: 1.5em;">¿Te atraves a trabajar en un ambiente multicultural
-        mientras exploras otro país?</h1>
-      <h2>Siendo parte de Emprendedor Global podrás hacer
-        networking y conocer todo el ecosistema emprendedor
-        a nivel internacional.</h2>
-    <button class='button with-background bold ge without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+     <div class='desktop'>
+        <h1 style="background:#30c39e;;font-size: 1.5em;">¿Te atraves a trabajar en un ambiente multicultural
+            mientras exploras otro país?</h1>
+          <h2>Siendo parte de Emprendedor Global podrás hacer
+            networking y conocer todo el ecosistema emprendedor
+            a nivel internacional.</h2>
+        <button class='button with-background bold ge without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+     </div>
+     
+    <div class='mobile'>
+        <h1>
+           Realiza tus pasantías pre profesionales en una Start Up Internacional
+         </h1>
+     </div>
     </div>
 
     <div class="product-info" *ngIf="actualPage == 'emprendedor-para-aprender'">
-      <h1 style="background:#30c39e;;font-size: 1.5em;">¿Quieres aprender de cerca el funcionamiento y la
-        gestión de una Start Up Internacional?</h1>
-      <h2>Siendo parte de Emprendedor Global podrás aplicar lo
-        aprendido de la universidad y ganar experiencia
-        profesional a nivel internacional.</h2>
-    <button class='button with-background bold ge without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+      <div class="desktop">
+          <h1 style="background:#30c39e;;font-size: 1.5em;">¿Quieres aprender de cerca el funcionamiento y la
+              gestión de una Start Up Internacional?</h1>
+            <h2>Siendo parte de Emprendedor Global podrás aplicar lo
+              aprendido de la universidad y ganar experiencia
+              profesional a nivel internacional.</h2>
+          <button class='button with-background bold ge without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+      </div>
+    <div class='mobile'>
+        <h1>
+           Realiza tus pasantías pre profesionales en una Start Up Internacional
+         </h1>
+     </div>
     </div>
 
     <!-- Aca empiezan los textos de los buyer persona de GT -->
     
     <div class="product-info" *ngIf="actualPage == 'talento-global-oportunidades'">
-      <h1 style="background:#0a8ea0;font-size: 1.5em;">¿Buscas la próxima oportunidad para darle un giro a
-        tu vida y obtener experiencia </h1>
-        <h1 style="background:#0a8ea0;font-size: 1.5em;margin-top: -10px;">profesional?</h1>
-      <h2>Diferénciate a través de una pasantía profesional en el
-        extranjero.</h2>
-    <button class='button with-background bold gt without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+      <div class='desktop'>
+          <h1 style="background:#0a8ea0;font-size: 1.5em;">¿Buscas la próxima oportunidad para darle un giro a
+              tu vida y obtener experiencia </h1>
+              <h1 style="background:#0a8ea0;font-size: 1.5em;margin-top: -10px;">profesional?</h1>
+            <h2>Diferénciate a través de una pasantía profesional en el
+              extranjero.</h2>
+          <button class='button with-background bold gt without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+      </div>
+      <div class="mobile">
+          <h1>
+              ¿Estás listo para iniciar tu experiencia profesional en el extranjero?
+          </h1>
+        </div>
+     
    </div>
 
    <div class="product-info" *ngIf="actualPage == 'talento-global-profesional'">
-    <h1 style="background:#0a8ea0;font-size: 1.5em;margin-top: 120px;">¿Quieres ampliar tus conocimientos profesionales a
-        nivel internacional?</h1>
-      <h2>Siendo un Talento Global podrás aprender de la rutina de
-        trabajo y la habilidad de desarrollar proyectos en una
-        empresa internacional.</h2>
-    <button class='button with-background bold gt without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+     <div class='desktop'>
+        <h1 style="background:#0a8ea0;font-size: 1.5em;margin-top: 120px;">¿Quieres ampliar tus conocimientos profesionales a
+            nivel internacional?</h1>
+          <h2>Siendo un Talento Global podrás aprender de la rutina de
+            trabajo y la habilidad de desarrollar proyectos en una
+            empresa internacional.</h2>
+        <button class='button with-background bold gt without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+     </div>
+     <div class="mobile">
+        <h1>
+            ¿Estás listo para iniciar tu experiencia profesional en el extranjero?
+        </h1>
+      </div>
     </div>
 
     <div class="product-info" *ngIf="actualPage == 'talento-global-networking'">
-      <h1 style="background:#0a8ea0;font-size: 1.5em;">¿Quieres vivir la diversidad cultural y obtener
-        experiencia profesional?</h1>
-      <h2>Siendo un Talento Global podrás ampliar tu red profesional
-        de contactos a nivel internacional, además de vivir la
-        multiculturalidad de laborar en el extranjero.</h2>
-    <button class='button with-background bold gt without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+      <div class='desktop'>
+          <h1 style="background:#0a8ea0;font-size: 1.5em;">¿Quieres vivir la diversidad cultural y obtener
+              experiencia profesional?</h1>
+            <h2>Siendo un Talento Global podrás ampliar tu red profesional
+              de contactos a nivel internacional, además de vivir la
+              multiculturalidad de laborar en el extranjero.</h2>
+          <button class='button with-background bold gt without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
+      </div>
+      <div class="mobile">
+          <h1>
+              ¿Estás listo para iniciar tu experiencia profesional en el extranjero?
+          </h1>
+        </div>
     </div>
 
   <!-- Texto del Landing page -->

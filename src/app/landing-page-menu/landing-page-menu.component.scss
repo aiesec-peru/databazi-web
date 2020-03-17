@@ -9,6 +9,19 @@
     z-index: 6;
 }
 
+.desktop {
+    display: block;
+    @media screen and (max-width: 990px){
+        display: none;
+    }
+}
+.mobile {
+    display: none;
+    @media screen and (max-width: 990px){
+        display: block;
+    }
+}
+
 #fixedMenu {
     transition: .3s
 }
@@ -131,6 +144,20 @@ ul#menu {
                 background-image: url('../../assets/products/gt/gt-intro.webp');
                 filter: brightness(50%);
             }
+            @media screen and (max-width: 990px){
+                @at-root :host-context(.no-webp) #{&} {
+                    background-image: url('../../assets/products/gt/mobile-photos/gt-mobile-intro.jpeg');
+                    filter: brightness(80%);
+                    background-size: auto 130%;
+                    background-position: top;
+                }
+                @at-root :host-context(.webp) #{&} {
+                    background-image: url('../../assets/products/gt/mobile-photos/gt-mobile-intro.webp');
+                    filter: brightness(80%);
+                    background-size: auto 130%;
+                    background-position: top;
+                } 
+            }
         }
         &.voluntario-global {
             @at-root :host-context(.no-webp) #{&} {
@@ -141,6 +168,16 @@ ul#menu {
                 background-image: url('../../assets/products/gv/gv-intro.webp');
                 filter: brightness(50%);
             }
+            @media screen and (max-width: 990px){
+                @at-root :host-context(.no-webp) #{&} {
+                    background-image: url('../../assets/products/gv/mobile-photos/gv-mobile-intro.jpg');
+                    filter: brightness(80%);
+                }
+                @at-root :host-context(.webp) #{&} {
+                    background-image: url('../../assets/products/gv/mobile-photos/gv-mobile-intro.webp');
+                    filter: brightness(80%);
+                } 
+            }
         }
         &.emprendedor-global {
             @at-root :host-context(.no-webp) #{&} {
@@ -150,6 +187,16 @@ ul#menu {
             @at-root :host-context(.webp) #{&} {
                 background-image: url('../../assets/products/ge/ge-intro.webp');
                 filter: brightness(50%);
+            }
+            @media screen and (max-width: 990px){
+                @at-root :host-context(.no-webp) #{&} {
+                    background-image: url('../../assets/products/ge/mobile-photos/ge-mobile-intro.png');
+                    filter: brightness(80%);
+                }
+                @at-root :host-context(.webp) #{&} {
+                    background-image: url('../../assets/products/ge/mobile-photos/ge-mobile-intro.webp');
+                    filter: brightness(80%);
+                } 
             }
         }
 
@@ -344,7 +391,6 @@ ul#menu {
             font-family: 'Lato', sans-serif; 
             font-style:italic;
         }
-        
     }
 }
 
@@ -426,6 +472,21 @@ ul#menu {
                 font-size: 1.2rem;
                 padding: 10px 0px !important;
             }
+        }
+    }
+    #header-product .container .product-info {
+        justify-content: flex-end !important;
+        padding-bottom: 10px;
+        .mobile {
+            h1 {
+                background-color: transparent;
+                text-align: center;
+                font-style: italic;
+                font-weight: 500;
+                font-family: 'Lato', sans-serif;
+                text-transform: unset;
+                font-size: 20px;
+            }   
         }
     }
 }
