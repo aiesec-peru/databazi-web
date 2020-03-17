@@ -44,6 +44,9 @@ export class AppComponent {
       case 'emprendedor-para-crecer':
         title = 'Crece, con Emprendedor Global';
         break;
+      case 'emprendedor-para-aprender':
+        title = 'Aprender, con Emprendedor Global';
+        break;
       case 'emprendedor-para-explorar':
         title = 'Explora, con Emprendedor Global';
         break;

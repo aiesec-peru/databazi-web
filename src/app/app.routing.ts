@@ -49,6 +49,10 @@ export const router : Routes = [
         loadChildren: './landing-page-ge/landing-page-ge.module#LandingPageGeModule'
     },
     {
+        path: 'emprendedor-para-aprender',
+        loadChildren: './landing-page-ge/landing-page-ge.module#LandingPageGeModule'
+    },
+    {
         path: 'emprendedor-para-conocer',
         loadChildren: './landing-page-ge/landing-page-ge.module#LandingPageGeModule'
     },
