@@ -487,14 +487,15 @@ ul#menu {
         justify-content: flex-end !important;
         padding-bottom: 10px;
         .mobile {
+            margin: 30px;
             h1 {
                 background-color: transparent;
                 text-align: center;
                 font-style: italic;
-                font-weight: 500;
+                font-weight: 600;
                 font-family: 'Lato', sans-serif;
                 text-transform: unset;
-                font-size: 20px;
+                font-size: 22px;
             }   
         }
     }
